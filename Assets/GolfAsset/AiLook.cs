@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables; // เพิ่มเข้ามาเพื่อให้โค้ดรู้จักคำสั่งเล่น Timeline
 
 public class AiLook : MonoBehaviour
 {
@@ -10,36 +11,37 @@ public class AiLook : MonoBehaviour
     public float aiSpeed = 5f;    
     
     [Header("Death Settings")]
-    public float killDistance = 1.8f; // เพิ่มระยะให้กว้างขึ้นเล็กน้อยเพื่อความชัวร์
+    public float killDistance = 1.8f; 
     public AudioClip deathScream;    
     public GameObject jumpScareUI;   
+
+    [Header("Sequencer Settings")]
+    public PlayableDirector deathSequence; // ช่องสำหรับใส่ DeathCamera ที่มี Timeline
+    public GameObject mainPlayer;          // ตัวละคร Capsule ของเรา
+    public GameObject deathCameraObj;      // กล้องในห้องตาย
 
     private Renderer aiRenderer;
     private bool isDead = false;
 
     void Start()
     {
-        // หากล้องหลักอัตโนมัติถ้าลืมลากใส่
         if (playerCam == null) playerCam = Camera.main;
 
-        // หา Skinned Mesh Renderer จากตัวลูก
+        // ปรับให้หา Renderer จากตัวลูกได้แม่นยำขึ้น
         aiRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        if (aiRenderer == null) aiRenderer = GetComponentInChildren<Renderer>();
         
-        if (aiRenderer == null) {
-            Debug.LogError("หาโมเดลผีไม่เจอ! กรุณาเช็กว่าโมเดลมี Skinned Mesh Renderer หรือไม่");
-        }
+        // ปิดกล้องห้องตายไว้ก่อนตอนเริ่มเกม
+        if (deathCameraObj != null) deathCameraObj.SetActive(false);
     }
 
     void Update()
     {
         if (isDead || aiRenderer == null) return; 
 
-        // คำนวณระยะห่างระหว่าง "เท้า" ของทั้งคู่ (แม่นยำกว่า)
         float distance = Vector3.Distance(transform.position, player.position);
-        
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(playerCam); 
 
-        // ตรวจสอบการมองเห็น
         if (GeometryUtility.TestPlanesAABB(planes, aiRenderer.bounds))
         {
             ai.speed = 0;
@@ -52,7 +54,6 @@ public class AiLook : MonoBehaviour
             ai.SetDestination(player.position);
             LookAtPlayer();
 
-            // ถ้าเข้าใกล้มากพอในขณะที่ผู้เล่นไม่มอง
             if (distance <= killDistance)
             {
                 CaughtPlayer();
@@ -73,27 +74,32 @@ public class AiLook : MonoBehaviour
     void CaughtPlayer()
     {
         isDead = true;
-        
-        // หยุดการเคลื่อนที่ทันที
         ai.isStopped = true;
         ai.speed = 0;
 
-        // 1. กระชากกล้องไปที่หน้าผี (บวกความสูงขึ้นไป 1 เมตรเพื่อให้จ้องหน้าพอดี)
-        playerCam.transform.LookAt(transform.position + Vector3.up * 1.5f);
-        
-        // 2. เล่นเสียง (ใช้ PlayClipAtPoint เพื่อให้เสียงดังที่ตัวผู้เล่น)
+        // 1. ปิดตัวผู้เล่น เพื่อไม่ให้เห็น Capsule ยืนค้างในด่าน
+        if (mainPlayer != null) mainPlayer.SetActive(false);
+
+        // 2. เปิดกล้องห้องตายที่จัดฉากไว้
+        if (deathCameraObj != null) deathCameraObj.SetActive(true);
+
+        // 3. สั่งให้ Timeline เริ่มเล่น (ทั้งภาพพุ่งและเสียง)
+        if (deathSequence != null) deathSequence.Play();
+
+        // เล่นเสียงเสริม (ถ้ามีใส่ไว้)
         if (deathScream != null)
         {
-            AudioSource.PlayClipAtPoint(deathScream, playerCam.transform.position);
+            AudioSource.PlayClipAtPoint(deathScream, transform.position);
         }
 
         if (jumpScareUI != null) jumpScareUI.SetActive(true);
 
-        Invoke("GameOver", 2.0f);
+        // รอ 3 วินาทีเพื่อให้ Timeline เล่นจนจบ แล้วค่อยกลับหน้าเมนู
+        Invoke("GameOver", 3.0f);
     }
 
     void GameOver()
     {
-        SceneManager.LoadScene(0); 
+        SceneManager.LoadScene(0);
     }
 }
