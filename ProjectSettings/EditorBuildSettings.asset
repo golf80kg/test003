@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene 3.unity
     guid: 5c22c6820771cac49a729075c82f2add
+  - enabled: 1
+    path: Assets/Scenes/Scoreboard.unity
+    guid: 315b98e18ef276941ba226a51c917e63
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

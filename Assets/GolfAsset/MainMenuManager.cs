@@ -25,4 +25,9 @@ public class MainMenuManager : MonoBehaviour
             Application.Quit(); 
         #endif
     }
+    public void OpenScoreboard()
+    {
+    // สั่งให้โหลดฉากลำดับที่ 5 (Scoreboard) ตามใน Build Settings ของคุณ
+    UnityEngine.SceneManagement.SceneManager.LoadScene(5); 
+    }
 }
