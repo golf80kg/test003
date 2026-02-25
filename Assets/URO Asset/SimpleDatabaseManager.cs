@@ -2,16 +2,15 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.SceneManagement; // เพิ่มเพื่อใช้ในการเปลี่ยนฉาก
 
-// 1. กำหนดโครงสร้างข้อมูล (Schema)
 [System.Serializable]
 public class PlayerData 
 {
     public string playerName;
-    public int score;
+    public float totalPlayTime; // เปลี่ยนมาเก็บเวลาเล่นแทนคะแนน
 }
 
-// 2. จำลอง Table สำหรับเก็บรายชื่อผู้เล่นทั้งหมด
 [System.Serializable]
 public class PlayerDatabase 
 {
@@ -20,55 +19,87 @@ public class PlayerDatabase
 
 public class SimpleDatabaseManager : MonoBehaviour 
 {
+    public static SimpleDatabaseManager Instance; // ทำให้เรียกใช้ได้จากทุกที่
+
     [Header("UI References")]
-    public TMP_InputField nameInput; // ช่องกรอกชื่อ
+    public TMP_InputField nameInput; 
     
     private string savePath;
     private PlayerDatabase db;
 
+    // ข้อมูลชั่วคราวสำหรับเก็บค่าระหว่างเล่น
+    private string tempPlayerName;
+    private float totalPlayTimeCounter;
+    private bool isTimerRunning = false;
+
+    void Awake() 
+    {
+        // ระบบ Singleton: ทำให้ Object นี้อยู่ยาวตั้งแต่หน้าเมนูจนจบเกม
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+        } else {
+            Destroy(gameObject);
+        }
+    }
+
     void Start() 
     {
-        // กำหนดที่อยู่ไฟล์ Database ให้อยู่ในโฟลเดอร์เซฟเกมของเครื่อง
         savePath = Application.persistentDataPath + "/ArcadeDatabase.json";
         LoadDatabase();
     }
 
-    // ฟังก์ชันนี้เอาไปผูกกับปุ่ม Save
-    public void SavePlayer() 
+    void Update()
     {
-        string newName = nameInput.text;
-        
-        // กันคนกดส่งข้อมูลว่างๆ
-        if (string.IsNullOrEmpty(newName)) 
+        // ถ้าตัวจับเวลาทำงานอยู่ ให้บวกเวลาไปเรื่อยๆ
+        if (isTimerRunning)
         {
-            Debug.LogWarning("ยังไม่ได้กรอกชื่อเลย!");
-            return;
+            totalPlayTimeCounter += Time.deltaTime;
         }
+    }
 
-        // 3. เพิ่มข้อมูลคนใหม่เข้าไป
-        db.players.Add(new PlayerData { playerName = newName, score = 0 });
-        
-        // 4. แปลงข้อมูลทั้งหมดเป็น JSON แล้วเขียนลงไฟล์
+    // --- ฟังก์ชันสำหรับหน้า NamingScene ---
+    
+    public void StartGameRecord() 
+    {
+        // 1. เก็บชื่อจาก InputField (ถ้าว่างจะใส่ว่า Player)
+        string newName = nameInput.text;
+        tempPlayerName = string.IsNullOrEmpty(newName) ? "Player" : newName;
+
+        // 2. เริ่มนับเวลาใหม่
+        totalPlayTimeCounter = 0;
+        isTimerRunning = true;
+
+        // 3. เปลี่ยนไปฉากเริ่มเกม (Scene1) ตามลำดับที่คุณตั้งไว้
+        SceneManager.LoadScene("Scene1"); 
+    }
+
+    // --- ฟังก์ชันสำหรับหน้าจบเกม (Scene 3) ---
+
+    public void FinishAndSaveGame() 
+    {
+        isTimerRunning = false; // หยุดเวลาทันทีเมื่อจบเกม
+
+        // เพิ่มข้อมูลลงใน Database
+        db.players.Add(new PlayerData { 
+            playerName = tempPlayerName, 
+            totalPlayTime = totalPlayTimeCounter 
+        });
+
+        // บันทึกเป็น JSON ลงเครื่อง
         string json = JsonUtility.ToJson(db, true);
         File.WriteAllText(savePath, json);
         
-        Debug.Log("บันทึกชื่อ: " + newName + " ลง Database สำเร็จ!");
-        Debug.Log("ไฟล์เก็บไว้ที่: " + savePath);
-        
-        nameInput.text = ""; // เคลียร์ช่องให้ว่าง
+        Debug.Log("บันทึกสถิติสำเร็จ! ชื่อ: " + tempPlayerName + " เวลา: " + totalPlayTimeCounter + " วินาที");
     }
 
-    // ฟังก์ชันโหลดข้อมูลเก่าขึ้นมาตอนเปิดเกม
     void LoadDatabase() 
     {
-        if (File.Exists(savePath)) 
-        {
+        if (File.Exists(savePath)) {
             string json = File.ReadAllText(savePath);
             db = JsonUtility.FromJson<PlayerDatabase>(json);
-        } 
-        else 
-        {
-            db = new PlayerDatabase(); // ถ้ายังไม่มีไฟล์ ให้สร้างฐานข้อมูลใหม่ว่างๆ
+        } else {
+            db = new PlayerDatabase();
         }
     }
 }
