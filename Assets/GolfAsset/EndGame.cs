@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // สำคัญมาก: ต้องมีเพื่อใช้คำสั่งเปลี่ยน Scene
+using UnityEngine.SceneManagement; 
 
 public class EndGame : MonoBehaviour
 {
@@ -11,7 +11,14 @@ public class EndGame : MonoBehaviour
         // ตรวจสอบว่าผู้เล่นเป็นคนเดินมาชนใช่ไหม
         if (other.CompareTag("Player"))
         {
-            // โหลดหน้า Main Menu กลับมา
+            // 1. สั่งให้ Database Manager หยุดจับเวลาและบันทึกข้อมูลลง JSON ทันที
+            if (SimpleDatabaseManager.Instance != null)
+            {
+                SimpleDatabaseManager.Instance.FinishAndSaveGame();
+                Debug.Log("บันทึกข้อมูลชื่อและเวลาลง JSON เรียบร้อย!");
+            }
+
+            // 2. โหลดหน้า Main Menu กลับมา
             SceneManager.LoadScene(mainMenuName);
         }
     }
