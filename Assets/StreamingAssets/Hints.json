@@ -1,0 +1,7 @@
+{
+  "hints": [
+    { "questionId": 1, "hintText": "A" },
+    { "questionId": 2, "hintText": "B" },
+    { "questionId": 3, "hintText": "C" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "questions": [
+    { 
+      "id": 1, 
+      "text": "ChoiceA?",
+      "choices": ["A", "B", "C", "D"],
+      "correctIndex": 0
+    },
+    { 
+      "id": 2, 
+      "text": "ChoiceB?",
+      "choices": ["A", "B", "C", "D"],
+      "correctIndex": 1
+    },
+    { 
+      "id": 3, 
+      "text": "ChoiceC?",
+      "choices": ["A", "B", "C", "D"],
+      "correctIndex": 2
+    }
+  ]
+}
