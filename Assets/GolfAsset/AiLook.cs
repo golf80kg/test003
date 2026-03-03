@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Playables; // เพิ่มเข้ามาเพื่อให้โค้ดรู้จักคำสั่งเล่น Timeline
+using UnityEngine.Playables;
 
 public class AiLook : MonoBehaviour
 {
@@ -16,9 +16,10 @@ public class AiLook : MonoBehaviour
     public GameObject jumpScareUI;   
 
     [Header("Sequencer Settings")]
-    public PlayableDirector deathSequence; // ช่องสำหรับใส่ DeathCamera ที่มี Timeline
-    public GameObject mainPlayer;          // ตัวละคร Capsule ของเรา
-    public GameObject deathCameraObj;      // กล้องในห้องตาย
+    // ไม่ต้องลากใส่ใน Inspector แล้ว โค้ดจะหาเองจากชื่อวัตถุ
+    [HideInInspector] public PlayableDirector deathSequence; 
+    [HideInInspector] public GameObject deathCameraObj;
+    public GameObject mainPlayer;          
 
     private Renderer aiRenderer;
     private bool isDead = false;
@@ -27,12 +28,26 @@ public class AiLook : MonoBehaviour
     {
         if (playerCam == null) playerCam = Camera.main;
 
-        // ปรับให้หา Renderer จากตัวลูกได้แม่นยำขึ้น
+        // --- ระบบค้นหากล้องและ Timeline อัตโนมัติ ---
+        // ค้นหาวัตถุในฉากที่ชื่อว่า "DeathCamera" (ต้องตั้งชื่อให้ตรงเป๊ะ)
+        deathCameraObj = GameObject.Find("DeathCamera");
+
+        if (deathCameraObj != null)
+        {
+            // ดึง PlayableDirector มาจากวัตถุที่เจอ
+            deathSequence = deathCameraObj.GetComponent<PlayableDirector>();
+            // ปิดกล้องไว้ก่อนเริ่มเกม
+            deathCameraObj.SetActive(false);
+            Debug.Log("<color=green>AI:</color> พบระบบ DeathCamera อัตโนมัติแล้ว!");
+        }
+        else
+        {
+            Debug.LogError("<color=red>AI Error:</color> ไม่พบวัตถุชื่อ 'DeathCamera' ในฉากนี้! กรุณาเช็คชื่อวัตถุด้วย");
+        }
+        // ------------------------------------------
+
         aiRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         if (aiRenderer == null) aiRenderer = GetComponentInChildren<Renderer>();
-        
-        // ปิดกล้องห้องตายไว้ก่อนตอนเริ่มเกม
-        if (deathCameraObj != null) deathCameraObj.SetActive(false);
     }
 
     void Update()
@@ -40,24 +55,35 @@ public class AiLook : MonoBehaviour
         if (isDead || aiRenderer == null) return; 
 
         float distance = Vector3.Distance(transform.position, player.position);
+        
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(playerCam); 
-
         if (GeometryUtility.TestPlanesAABB(planes, aiRenderer.bounds))
         {
-            ai.speed = 0;
-            ai.isStopped = true; 
+            StopEnemy();
         }
         else
         {
-            ai.isStopped = false;
-            ai.speed = aiSpeed;
-            ai.SetDestination(player.position);
-            LookAtPlayer();
+            MoveToPlayer(distance);
+        }
+    }
 
-            if (distance <= killDistance)
-            {
-                CaughtPlayer();
-            }
+    void StopEnemy()
+    {
+        ai.isStopped = true;
+        ai.speed = 0;
+        ai.velocity = Vector3.zero;
+    }
+
+    void MoveToPlayer(float distance)
+    {
+        ai.isStopped = false;
+        ai.speed = aiSpeed;
+        ai.SetDestination(player.position);
+        LookAtPlayer();
+
+        if (distance <= killDistance)
+        {
+            CaughtPlayer();
         }
     }
 
@@ -74,32 +100,42 @@ public class AiLook : MonoBehaviour
     void CaughtPlayer()
     {
         isDead = true;
-        ai.isStopped = true;
-        ai.speed = 0;
+        ai.enabled = false; 
 
-        // 1. ปิดตัวผู้เล่น เพื่อไม่ให้เห็น Capsule ยืนค้างในด่าน
+        if (playerCam != null) playerCam.gameObject.SetActive(false);
         if (mainPlayer != null) mainPlayer.SetActive(false);
-
-        // 2. เปิดกล้องห้องตายที่จัดฉากไว้
-        if (deathCameraObj != null) deathCameraObj.SetActive(true);
-
-        // 3. สั่งให้ Timeline เริ่มเล่น (ทั้งภาพพุ่งและเสียง)
-        if (deathSequence != null) deathSequence.Play();
-
-        // เล่นเสียงเสริม (ถ้ามีใส่ไว้)
-        if (deathScream != null)
-        {
-            AudioSource.PlayClipAtPoint(deathScream, transform.position);
-        }
-
         if (jumpScareUI != null) jumpScareUI.SetActive(true);
 
-        // รอ 3 วินาทีเพื่อให้ Timeline เล่นจนจบ แล้วค่อยกลับหน้าเมนู
-        Invoke("GameOver", 3.0f);
+        if (deathCameraObj != null) 
+        {
+            deathCameraObj.SetActive(true);
+            
+            // เช็คว่ามี Timeline ให้เล่นไหม ถ้ามีให้เล่นจนจบ ถ้าไม่มีให้รอ 3 วิ
+            float waitTime = 3.0f;
+            if (deathSequence != null) 
+            {
+                deathSequence.Play();
+                waitTime = (float)deathSequence.duration;
+            }
+
+            if (deathScream != null)
+            {
+                AudioSource.PlayClipAtPoint(deathScream, deathCameraObj.transform.position);
+            }
+
+            Invoke("GameOver", waitTime);
+        }
+        else
+        {
+            // ถ้าหากล้องไม่เจอจริงๆ ให้ตัดเข้าเมนูเลยใน 1 วิเพื่อไม่ให้เกมค้าง
+            Invoke("GameOver", 1.0f);
+        }
     }
 
     void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 }

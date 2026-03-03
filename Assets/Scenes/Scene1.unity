@@ -1035,7 +1035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &177821393
 Transform:
   m_ObjectHideFlags: 0
@@ -2706,8 +2706,8 @@ MonoBehaviour:
   deathScream: {fileID: 0}
   jumpScareUI: {fileID: 0}
   deathSequence: {fileID: 0}
-  mainPlayer: {fileID: 0}
   deathCameraObj: {fileID: 0}
+  mainPlayer: {fileID: 0}
 --- !u!195 &459387758
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5639,7 +5639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d121fdb49dd7be458c61d5539563fce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.16
+      value: -15.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d121fdb49dd7be458c61d5539563fce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5820,9 +5820,9 @@ MonoBehaviour:
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 48ed5465fbd041c4db01885834b7cdee, type: 3}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 0}
-  mainPlayer: {fileID: 1405016307}
+  deathSequence: {fileID: 1596020916}
   deathCameraObj: {fileID: 1596020913}
+  mainPlayer: {fileID: 1405016307}
 --- !u!195 &965236516
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9308,7 +9308,7 @@ Transform:
   m_GameObject: {fileID: 1596020913}
   serializedVersion: 2
   m_LocalRotation: {x: -0.08428142, y: 0, z: 0, w: 0.996442}
-  m_LocalPosition: {x: 0.58, y: 0.18155956, z: -2.9615502}
+  m_LocalPosition: {x: 0.58, y: 0.133, z: -3.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9355,7 +9355,9 @@ PlayableDirector:
     value: {fileID: 1596020915}
   - key: {fileID: -8459915132522712218, guid: 650ebe3bf260b894bad03e364187d5b9, type: 2}
     value: {fileID: 1596020917}
-  - key: {fileID: 372357497294695525, guid: 650ebe3bf260b894bad03e364187d5b9, type: 2}
+  - key: {fileID: -3493324986531884038, guid: 650ebe3bf260b894bad03e364187d5b9, type: 2}
+    value: {fileID: 1596020915}
+  - key: {fileID: 3052439508859767403, guid: 650ebe3bf260b894bad03e364187d5b9, type: 2}
     value: {fileID: 1596020915}
   m_ExposedReferences:
     m_References: []
