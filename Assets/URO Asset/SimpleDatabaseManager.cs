@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
+// --- เพิ่มส่วนนี้กลับเข้าไปครับ ---
 [System.Serializable]
 public class PlayerData 
 {
@@ -17,6 +18,7 @@ public class PlayerDatabase
 {
     public List<PlayerData> players = new List<PlayerData>();
 }
+// -----------------------------
 
 public class SimpleDatabaseManager : MonoBehaviour 
 {
@@ -37,9 +39,16 @@ public class SimpleDatabaseManager : MonoBehaviour
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(gameObject); 
+            SceneManager.sceneLoaded += OnSceneLoaded;
         } else {
+            if (nameInput != null) Instance.nameInput = this.nameInput;
             Destroy(gameObject);
         }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        nameInput = FindObjectOfType<TMP_InputField>();
     }
 
     void Start() 
@@ -56,13 +65,18 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
     }
 
-    // --- เพิ่มฟังก์ชัน BackToMenu ไว้ที่นี่ครับ ---
-    public void BackToMenu()
+    // --- ฟังก์ชันควบคุมเวลา ---
+    public void SetTimerRunning(bool running)
     {
-        // โหลดฉากลำดับที่ 0 (MainMenu)
-        SceneManager.LoadScene(0); 
+        isTimerRunning = running;
     }
 
+    public void GoToNamingScene()
+    {
+        SceneManager.LoadScene("NamingScene"); 
+    }
+
+    // ฟังก์ชันเริ่มเกม (จากหน้ากรอกชื่อ)
     public void StartGameRecord() 
     {
         if (nameInput != null)
@@ -72,28 +86,27 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
         else
         {
-            tempPlayerName = "Guest";
+            var foundInput = FindObjectOfType<TMP_InputField>();
+            tempPlayerName = (foundInput != null && !string.IsNullOrEmpty(foundInput.text)) ? foundInput.text : "Guest";
         }
 
-        totalPlayTimeCounter = 0;
+        totalPlayTimeCounter = 0; // รีเซ็ตเวลาเป็น 0 เมื่อเริ่มใหม่จากหน้ากรอกชื่อ
         isTimerRunning = true;
-
         SceneManager.LoadScene("Scene1"); 
     }
 
     public void FinishAndSaveGame() 
     {
         isTimerRunning = false;
+        LoadDatabase();
+        db.players.Add(new PlayerData { playerName = tempPlayerName, totalPlayTime = totalPlayTimeCounter });
+        SaveToDisk();
+    }
 
-        db.players.Add(new PlayerData { 
-            playerName = tempPlayerName, 
-            totalPlayTime = totalPlayTimeCounter 
-        });
-
+    private void SaveToDisk()
+    {
         string json = JsonUtility.ToJson(db, true);
         File.WriteAllText(savePath, json);
-        
-        Debug.Log("บันทึกสำเร็จที่: " + savePath);
     }
 
     void LoadDatabase() 
@@ -106,9 +119,13 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
     }
 
-    public List<PlayerData> GetPlayerList()
+    public List<PlayerData> GetPlayerList() { LoadDatabase(); return db.players.OrderBy(p => p.totalPlayTime).ToList(); }
+
+    public void BackToMenu()
     {
-        if (db == null) LoadDatabase();
-        return db.players.OrderBy(p => p.totalPlayTime).ToList();
+        isTimerRunning = false;
+        SceneManager.LoadScene(0); 
     }
+
+    private void OnDestroy() { SceneManager.sceneLoaded -= OnSceneLoaded; }
 }

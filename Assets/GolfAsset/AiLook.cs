@@ -16,7 +16,6 @@ public class AiLook : MonoBehaviour
     public GameObject jumpScareUI;   
 
     [Header("Sequencer Settings")]
-    // ไม่ต้องลากใส่ใน Inspector แล้ว โค้ดจะหาเองจากชื่อวัตถุ
     [HideInInspector] public PlayableDirector deathSequence; 
     [HideInInspector] public GameObject deathCameraObj;
     public GameObject mainPlayer;          
@@ -28,23 +27,17 @@ public class AiLook : MonoBehaviour
     {
         if (playerCam == null) playerCam = Camera.main;
 
-        // --- ระบบค้นหากล้องและ Timeline อัตโนมัติ ---
-        // ค้นหาวัตถุในฉากที่ชื่อว่า "DeathCamera" (ต้องตั้งชื่อให้ตรงเป๊ะ)
         deathCameraObj = GameObject.Find("DeathCamera");
-
         if (deathCameraObj != null)
         {
-            // ดึง PlayableDirector มาจากวัตถุที่เจอ
             deathSequence = deathCameraObj.GetComponent<PlayableDirector>();
-            // ปิดกล้องไว้ก่อนเริ่มเกม
             deathCameraObj.SetActive(false);
             Debug.Log("<color=green>AI:</color> พบระบบ DeathCamera อัตโนมัติแล้ว!");
         }
         else
         {
-            Debug.LogError("<color=red>AI Error:</color> ไม่พบวัตถุชื่อ 'DeathCamera' ในฉากนี้! กรุณาเช็คชื่อวัตถุด้วย");
+            Debug.LogError("<color=red>AI Error:</color> ไม่พบวัตถุชื่อ 'DeathCamera' ในฉากนี้!");
         }
-        // ------------------------------------------
 
         aiRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         if (aiRenderer == null) aiRenderer = GetComponentInChildren<Renderer>();
@@ -55,7 +48,6 @@ public class AiLook : MonoBehaviour
         if (isDead || aiRenderer == null) return; 
 
         float distance = Vector3.Distance(transform.position, player.position);
-        
         Plane[] planes = GeometryUtility.CalculateFrustumPlanes(playerCam); 
         if (GeometryUtility.TestPlanesAABB(planes, aiRenderer.bounds))
         {
@@ -91,16 +83,19 @@ public class AiLook : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         direction.y = 0; 
-        if (direction != Vector3.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(direction);
-        }
+        if (direction != Vector3.zero) transform.rotation = Quaternion.LookRotation(direction);
     }
 
     void CaughtPlayer()
     {
         isDead = true;
         ai.enabled = false; 
+
+        // 1. สั่งหยุดเวลาใน Database ทันทีที่โดนจับ
+        if (SimpleDatabaseManager.Instance != null)
+        {
+            SimpleDatabaseManager.Instance.SetTimerRunning(false);
+        }
 
         if (playerCam != null) playerCam.gameObject.SetActive(false);
         if (mainPlayer != null) mainPlayer.SetActive(false);
@@ -109,8 +104,6 @@ public class AiLook : MonoBehaviour
         if (deathCameraObj != null) 
         {
             deathCameraObj.SetActive(true);
-            
-            // เช็คว่ามี Timeline ให้เล่นไหม ถ้ามีให้เล่นจนจบ ถ้าไม่มีให้รอ 3 วิ
             float waitTime = 3.0f;
             if (deathSequence != null) 
             {
@@ -118,24 +111,22 @@ public class AiLook : MonoBehaviour
                 waitTime = (float)deathSequence.duration;
             }
 
-            if (deathScream != null)
-            {
-                AudioSource.PlayClipAtPoint(deathScream, deathCameraObj.transform.position);
-            }
+            if (deathScream != null) AudioSource.PlayClipAtPoint(deathScream, deathCameraObj.transform.position);
 
-            Invoke("GameOver", waitTime);
+            Invoke("GoToGameOverScene", waitTime);
         }
         else
         {
-            // ถ้าหากล้องไม่เจอจริงๆ ให้ตัดเข้าเมนูเลยใน 1 วิเพื่อไม่ให้เกมค้าง
-            Invoke("GameOver", 1.0f);
+            Invoke("GoToGameOverScene", 1.0f);
         }
     }
 
-    void GameOver()
+    // ฟังก์ชันใหม่: โหลดเข้า Scene GameOver
+    void GoToGameOverScene()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        SceneManager.LoadScene(0);
+        // เปลี่ยนเป็นชื่อ Scene ตายของคุณ (ต้องมีใน Build Settings)
+        SceneManager.LoadScene("GameOverScene"); 
     }
 }
