@@ -5,7 +5,6 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-// --- เพิ่มส่วนนี้กลับเข้าไปครับ ---
 [System.Serializable]
 public class PlayerData 
 {
@@ -18,7 +17,6 @@ public class PlayerDatabase
 {
     public List<PlayerData> players = new List<PlayerData>();
 }
-// -----------------------------
 
 public class SimpleDatabaseManager : MonoBehaviour 
 {
@@ -33,6 +31,9 @@ public class SimpleDatabaseManager : MonoBehaviour
     private string tempPlayerName;
     private float totalPlayTimeCounter;
     private bool isTimerRunning = false;
+
+    // --- เพิ่มตัวแปรสำหรับระบบ Checkpoint ---
+    private string lastSceneName; 
 
     void Awake() 
     {
@@ -49,6 +50,14 @@ public class SimpleDatabaseManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         nameInput = FindObjectOfType<TMP_InputField>();
+
+        // --- ระบบ Checkpoint: บันทึกชื่อฉากล่าสุดที่เข้าไปเล่น ---
+        // เราจะไม่บันทึกหน้าเมนู หน้าตาย หรือหน้ากรอกชื่อ
+        if (scene.name != "MainMenu" && scene.name != "NamingScene" && scene.name != "GameOverScene")
+        {
+            lastSceneName = scene.name;
+            Debug.Log("<color=cyan>Checkpoint:</color> บันทึกฉากล่าสุดแล้ว -> " + lastSceneName);
+        }
     }
 
     void Start() 
@@ -65,10 +74,17 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
     }
 
-    // --- ฟังก์ชันควบคุมเวลา ---
+    // --- ฟังก์ชันควบคุมเวลา (ใช้เรียกจากสคริปต์ตาย/ปุ่ม Retry) ---
     public void SetTimerRunning(bool running)
     {
         isTimerRunning = running;
+    }
+
+    // --- ฟังก์ชันดึงชื่อฉากล่าสุด (ใช้เรียกจากปุ่ม Retry) ---
+    public string GetLastSceneName()
+    {
+        // ถ้าไม่มีค่าบันทึกไว้ (เผื่อกรณีฉุกเฉิน) ให้ส่ง Scene1 กลับไป
+        return string.IsNullOrEmpty(lastSceneName) ? "Scene1" : lastSceneName;
     }
 
     public void GoToNamingScene()
@@ -76,7 +92,6 @@ public class SimpleDatabaseManager : MonoBehaviour
         SceneManager.LoadScene("NamingScene"); 
     }
 
-    // ฟังก์ชันเริ่มเกม (จากหน้ากรอกชื่อ)
     public void StartGameRecord() 
     {
         if (nameInput != null)
@@ -90,7 +105,7 @@ public class SimpleDatabaseManager : MonoBehaviour
             tempPlayerName = (foundInput != null && !string.IsNullOrEmpty(foundInput.text)) ? foundInput.text : "Guest";
         }
 
-        totalPlayTimeCounter = 0; // รีเซ็ตเวลาเป็น 0 เมื่อเริ่มใหม่จากหน้ากรอกชื่อ
+        totalPlayTimeCounter = 0; 
         isTimerRunning = true;
         SceneManager.LoadScene("Scene1"); 
     }

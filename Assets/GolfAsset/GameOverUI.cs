@@ -12,15 +12,40 @@ public class GameOverUI : MonoBehaviour
 
     public void Retry()
     {
-        Debug.Log("ปุ่ม Restart ถูกกดแล้ว!"); // เช็คใน Console ว่าบรรทัดนี้ขึ้นไหม
+        Debug.Log("ปุ่ม Restart ถูกกดแล้ว!"); 
 
         if (SimpleDatabaseManager.Instance != null)
         {
+            // 1. สั่งให้นับเวลาต่อจากเดิม
             SimpleDatabaseManager.Instance.SetTimerRunning(true);
-            Debug.Log("สั่งให้ Database นับเวลาต่อแล้ว");
+            
+            // 2. ถาม Database ว่า "ล่าสุดเล่นค้างไว้ที่ฉากไหน?" 
+            // (ดึงค่ามาจาก lastSceneName ที่เราเขียนไว้ใน Manager)
+            string sceneToLoad = SimpleDatabaseManager.Instance.GetLastSceneName();
+            
+            Debug.Log("กำลังกลับไปเกิดใหม่ที่ฉาก: " + sceneToLoad);
+            
+            // 3. โหลดฉากล่าสุดที่บันทึกไว้
+            SceneManager.LoadScene(sceneToLoad);
         }
+        else
+        {
+            // กรณีหา Instance ไม่เจอ ให้กลับไป Scene1 เป็นค่าเริ่มต้น
+            Debug.LogWarning("ไม่พบ Database Instance! โหลด Scene1 แทน");
+            SceneManager.LoadScene("Scene1");
+        }
+    }
 
-        // โหลดฉากเกม (เปลี่ยน "Scene1" เป็นชื่อฉากของคุณ)
-        SceneManager.LoadScene("Scene1"); 
+    // เพิ่มฟังก์ชันสำหรับปุ่มกลับเมนูหลัก (ถ้ามี)
+    public void MainMenu()
+    {
+        if (SimpleDatabaseManager.Instance != null)
+        {
+            SimpleDatabaseManager.Instance.BackToMenu();
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
