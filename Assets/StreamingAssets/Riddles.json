@@ -1,0 +1,32 @@
+{
+  "riddles": [
+    {
+      "id": 1,
+      "text": "A?",
+      "hint": " A",
+      "choices": ["A", "B", "C", "D"],
+      "correctAnswerIndex": 0 
+    },
+    {
+      "id": 2,
+      "text": "B?",
+      "hint": " B",
+      "choices": ["A", "B", "C", "D"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 3,
+      "text": "Uro?",
+      "hint": " Uro",
+      "choices": ["Hunter", "Uro", "Golf", "Dog"],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 4,
+      "text": "Golf?",
+      "hint": " GOlf",
+      "choices": ["Uro", "Hunter", "Golf", "Cat"],
+      "correctAnswerIndex": 2
+    }
+  ]
+}
