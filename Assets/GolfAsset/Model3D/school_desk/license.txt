@@ -1,0 +1,11 @@
+Model Information:
+* title:	School Desk
+* source:	https://sketchfab.com/3d-models/school-desk-746abc6690c240d18f0a8dcd5492435a
+* author:	afferu (https://sketchfab.com/afferu)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "School Desk" (https://sketchfab.com/3d-models/school-desk-746abc6690c240d18f0a8dcd5492435a) by afferu (https://sketchfab.com/afferu) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
