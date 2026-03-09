@@ -1,34 +1,42 @@
 using UnityEngine;
-using TMPro; // ใช้ TextMeshPro สำหรับตัวหนังสือ
-using UnityEngine.UI; // ใช้จัดการ Button
+using TMPro; 
+using UnityEngine.UI; 
+using System.Collections; 
 
 public class QuestionUIManager : MonoBehaviour
 {
     [Header("ส่วนแสดงผล UI")]
-    public GameObject questionPanel; // หน้าต่าง Panel รวม
-    public TextMeshProUGUI questionText; // ข้อความคำถาม
+    public GameObject questionPanel; 
+    public TextMeshProUGUI questionText; 
 
     [Header("ปุ่มตัวเลือกทั้ง 4")]
     public Button[] choiceButtons; 
-    public TextMeshProUGUI[] choiceTexts; // ข้อความบนปุ่ม (ลาก Text ของปุ่มมาใส่)
+    public TextMeshProUGUI[] choiceTexts; 
 
-    private int correctIndex; // ตัวแปรเก็บว่าข้อนี้ ตัวเลือกไหนคือคำตอบที่ถูก
+    [Header("ตั้งค่าระบบคูลดาวน์")] 
+    public float cooldownTime = 3.0f; // เวลาคูลดาวน์ (วินาที)
+
+    [Header("ตั้งค่ากำแพงที่จะเปิด")] // <--- เพิ่มหัวข้อใหม่
+    public GameObject doorToOpen; // <--- เพิ่มช่องสำหรับลากโมเดลกำแพงมาใส่
+
+    private int correctIndex; 
+    private bool isCooldown = false; 
+    private string originalQuestion; 
 
     void Start()
     {
-        // ปิดหน้า UI ไว้ก่อนตอนเริ่มเกม
         questionPanel.SetActive(false);
     }
 
-    // ฟังก์ชันนี้เอาไว้รับข้อมูล (RiddleData) มาแสดงบนหน้าจอ
     public void OpenQuestion(RiddleData riddle)
     {
-        questionPanel.SetActive(true); // เปิดหน้า UI
+        questionPanel.SetActive(true); 
         
-        questionText.text = riddle.text; // แสดงคำถาม
-        correctIndex = riddle.correctAnswerIndex; // จำไว้ว่าข้อไหนถูก (0, 1, 2, หรือ 3)
+        questionText.text = riddle.text; 
+        originalQuestion = riddle.text; 
+        correctIndex = riddle.correctAnswerIndex; 
+        isCooldown = false; 
 
-        // เอาข้อความจาก JSON มาใส่ในปุ่มทั้ง 4
         for (int i = 0; i < 4; i++)
         {
             if (i < riddle.choices.Length)
@@ -36,35 +44,54 @@ public class QuestionUIManager : MonoBehaviour
                 choiceTexts[i].text = riddle.choices[i];
             }
         }
-
-        // ปลดล็อกเมาส์ให้ผู้เล่นขยับเมาส์ไปกดปุ่มได้
-       // Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
     }
 
-    // ฟังก์ชันนี้จะผูกกับปุ่ม เมื่อผู้เล่นกดปุ่มจะส่งหมายเลข (0-3) มาเช็ค
     public void CheckAnswer(int selectedIndex)
     {
+        if (isCooldown) return;
+
         if (selectedIndex == correctIndex)
         {
             Debug.Log("ตอบถูก! ผ่านได้");
-            // TODO: ใส่คำสั่งเปิดประตู หรือให้รางวัลผู้เล่นตรงนี้
+            
+            // <--- คำสั่งทำลาย/ซ่อนกำแพง เมื่อตอบถูก
+            if (doorToOpen != null)
+            {
+                doorToOpen.SetActive(false); // สั่งให้กำแพงบล็อกนี้หายไป
+                Debug.Log("กำแพงเปิดแล้ว!");
+            }
 
-            CloseQuestion(); // ตอบถูกแล้วปิดหน้าต่าง
+            CloseQuestion(); 
         }
         else
         {
             Debug.Log("ตอบผิด! ลองใหม่นะ");
-            // TODO: ใส่เสียงตอบผิด หรือลดเลือดตรงนี้
+            StartCoroutine(WrongAnswerCooldown());
         }
     }
 
     public void CloseQuestion()
     {
-        questionPanel.SetActive(false); // ปิดหน้า UI
+        questionPanel.SetActive(false); 
 
-        // ล็อกเมาส์กลับไปตรงกลางเพื่อให้ผู้เล่นหมุนมุมกล้องเดินต่อได้
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private IEnumerator WrongAnswerCooldown()
+    {
+        isCooldown = true; 
+        
+        float remainingTime = cooldownTime; 
+
+        while (remainingTime > 0)
+        {
+            questionText.text = "<color=red>ตอบผิด!</color>\n กรุณารอ " + Mathf.CeilToInt(remainingTime) + " วินาที...แล้วกลับมาตอบใหม่";
+            remainingTime -= Time.deltaTime;
+            yield return null; 
+        }
+
+        questionText.text = originalQuestion;
+        isCooldown = false;
     }
 }
