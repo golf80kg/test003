@@ -93,22 +93,25 @@ public class SimpleDatabaseManager : MonoBehaviour
     }
 
     public void StartGameRecord() 
+{
+    if (nameInput != null)
     {
-        if (nameInput != null)
+        string newName = nameInput.text.Trim(); // ใช้ Trim เพื่อตัดช่องว่าง
+        
+        // ถ้าชื่อว่างเปล่าจริงๆ ไม่ควรให้โหลดฉากต่อ
+        if (string.IsNullOrEmpty(newName)) 
         {
-            string newName = nameInput.text;
-            tempPlayerName = string.IsNullOrEmpty(newName) ? "Player" : newName;
+            Debug.LogError("StartGameRecord ถูกเรียกโดยไม่มีชื่อผู้เล่น!");
+            return; 
         }
-        else
-        {
-            var foundInput = FindObjectOfType<TMP_InputField>();
-            tempPlayerName = (foundInput != null && !string.IsNullOrEmpty(foundInput.text)) ? foundInput.text : "Guest";
-        }
-
-        totalPlayTimeCounter = 0; 
-        isTimerRunning = true;
-        SceneManager.LoadScene("Scene1"); 
+        
+        tempPlayerName = newName;
     }
+    // ... ส่วนที่เหลือของโค้ด ...
+    totalPlayTimeCounter = 0; 
+    isTimerRunning = true;
+    SceneManager.LoadScene("Scene1"); 
+}
 
     public void FinishAndSaveGame() 
     {

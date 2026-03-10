@@ -7,19 +7,24 @@ public class NamingSceneBridge : MonoBehaviour
     public TMP_InputField localNameInput;
 
     public void OnClickSaveAndStart()
+{
+    // 1. ตรวจสอบก่อนว่ากรอกชื่อหรือยัง (ตัดช่องว่างออกด้วย Trim)
+    if (localNameInput != null && string.IsNullOrWhiteSpace(localNameInput.text))
     {
-        // 1. เช็คว่ามีตัว Manager (ตัวแม่) อยู่ในระบบไหม
-        if (SimpleDatabaseManager.Instance != null)
-        {
-            // 2. ส่งปลั๊ก InputField ของฉากนี้ไปให้ตัวแม่
-            SimpleDatabaseManager.Instance.nameInput = localNameInput;
-            
-            // 3. สั่งให้ตัวแม่ทำงาน (เก็บชื่อ, เริ่มนับเวลา, โหลด Scene1)
-            SimpleDatabaseManager.Instance.StartGameRecord();
-        }
-        else
-        {
-            Debug.LogError("หา SimpleDatabaseManager (Instance) ไม่เจอ! คุณได้สร้างมันไว้ในฉาก MainMenu หรือยัง?");
-        }
+        Debug.LogWarning("กรุณากรอกชื่อก่อนเริ่มเกม!");
+        // คุณอาจจะเพิ่มโค้ดแสดง UI เตือนผู้เล่นตรงนี้ได้ เช่น textAlert.text = "กรุณาใส่ชื่อ";
+        return; // สั่งให้หยุดการทำงานตรงนี้เลย ไม่ไปบรรทัดถัดไป
     }
+
+    // 2. ถ้ากรอกชื่อแล้ว ถึงจะสั่งให้ตัวแม่ทำงาน
+    if (SimpleDatabaseManager.Instance != null)
+    {
+        SimpleDatabaseManager.Instance.nameInput = localNameInput;
+        SimpleDatabaseManager.Instance.StartGameRecord();
+    }
+    else
+    {
+        Debug.LogError("หา SimpleDatabaseManager ไม่เจอ!");
+    }
+}
 }
