@@ -3310,6 +3310,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   myRiddle:
     id: 0
+    type: 
     text: 
     hint: 
     choices: []
@@ -7487,6 +7488,7 @@ MonoBehaviour:
   uiManager: {fileID: 1464632312}
   myRiddle:
     id: 0
+    type: 
     text: 
     hint: 
     choices: []
@@ -14619,6 +14621,7 @@ MonoBehaviour:
   uiManager: {fileID: 357362322}
   myRiddle:
     id: 0
+    type: 
     text: 
     hint: 
     choices: []
@@ -15831,6 +15834,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   myRiddle:
     id: 0
+    type: 
     text: 
     hint: 
     choices: []
@@ -19674,6 +19678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa2c94b2626e9458e11c445e33417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DatabaseManager
+  levelType: Array
+  puzzlesToSpawn: 2
   questionBoards:
   - {fileID: 677641965}
   - {fileID: 1409110035}

@@ -35,11 +35,16 @@ public class MapItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // ถ้าเป็นประตู หรือ (เป็นคำใบ้ที่ยังไม่ได้เก็บ) ถึงจะขึ้นให้กด E
-            if (isQuestionBoard || (!isQuestionBoard && !isCollected))
+            // แยกข้อความแจ้งเตือนให้ตรงกับปุ่ม
+            if (isQuestionBoard)
             {
                 isPlayerInRange = true;
-                Debug.Log("กด E เพื่อโต้ตอบ");
+                Debug.Log("กด E เพื่อโต้ตอบกับประตู");
+            }
+            else if (!isQuestionBoard && !isCollected)
+            {
+                isPlayerInRange = true;
+                Debug.Log("กด Q เพื่อเก็บคำใบ้");
             }
         }
     }
@@ -54,42 +59,39 @@ public class MapItem : MonoBehaviour
 
     private void Update()
     {
-        // เมื่อผู้เล่นกดปุ่ม E
-        if (Input.GetKeyDown(KeyCode.Q))
+        // --- 1. สำหรับ "ประตูคำถาม" (รอรับปุ่ม E) ---
+        if (isQuestionBoard && Input.GetKeyDown(KeyCode.E))
         {
-            // --- ถ้ากระดานนี้คือ "ประตูคำถาม" ---
-            if (isQuestionBoard)
+            if (isPlayerInRange && myRiddle != null)
             {
-                if (isPlayerInRange && myRiddle != null)
+                if (uiManager != null) 
                 {
-                    if (uiManager != null) 
-                    {
-                        uiManager.OpenQuestion(myRiddle);
-                    }
-                    else 
-                    {
-                        Debug.LogError("ลืมใส่ UIManager ให้กับ MapItem นี้ครับ!");
-                    }
+                    uiManager.OpenQuestion(myRiddle);
+                }
+                else 
+                {
+                    Debug.LogError("ลืมใส่ UIManager ให้กับ MapItem นี้ครับ!");
                 }
             }
-            // --- ถ้ากระดานนี้คือ "คำใบ้ (Note)" ---
-            else
+        }
+
+        // --- 2. สำหรับ "คำใบ้ (Note)" (รอรับปุ่ม Q) ---
+        if (!isQuestionBoard && Input.GetKeyDown(KeyCode.Q))
+        {
+            // จังหวะที่ 1: เดินมาใกล้ + ยังไม่ได้เก็บ -> กด Q เพื่อ "เก็บ"
+            if (isPlayerInRange && !isCollected)
             {
-                // จังหวะที่ 1: เดินมาใกล้ + ยังไม่ได้เก็บ -> กด E เพื่อ "เก็บ"
-                if (isPlayerInRange && !isCollected)
-                {
-                    CollectNote();
-                }
-                // จังหวะที่ 2: เก็บมาแล้ว + ยังไม่ได้เปิดอ่าน -> กด E เพื่อ "เปิดอ่าน"
-                else if (isCollected && !isReading)
-                {
-                    OpenNote();
-                }
-                // จังหวะที่ 3: เปิดอ่านอยู่ -> กด E เพื่อ "ปิด"
-                else if (isCollected && isReading)
-                {
-                    CloseNote();
-                }
+                CollectNote();
+            }
+            // จังหวะที่ 2: เก็บมาแล้ว + ยังไม่ได้เปิดอ่าน -> กด Q เพื่อ "เปิดอ่าน"
+            else if (isCollected && !isReading)
+            {
+                OpenNote();
+            }
+            // จังหวะที่ 3: เปิดอ่านอยู่ -> กด Q เพื่อ "ปิด"
+            else if (isCollected && isReading)
+            {
+                CloseNote();
             }
         }
     }
@@ -105,7 +107,8 @@ public class MapItem : MonoBehaviour
         if (GetComponent<MeshRenderer>() != null) GetComponent<MeshRenderer>().enabled = false; 
         if (GetComponent<BoxCollider>() != null) GetComponent<BoxCollider>().enabled = false; 
 
-        Debug.Log("เก็บโน้ตคำใบ้แล้ว! (กด E เพื่อเปิดอ่าน)");
+        // แก้ข้อความแจ้งเตือนให้ตรงกับปุ่ม Q
+        Debug.Log("เก็บโน้ตคำใบ้แล้ว! (กด Q เพื่อเปิดอ่าน)");
     }
 
     void OpenNote()
@@ -118,7 +121,6 @@ public class MapItem : MonoBehaviour
         // เปิดหน้าต่าง UI ของโน้ต
         if (noteUI != null) noteUI.SetActive(true); 
 
-        // (ลบคำสั่งปลดล็อกเมาส์ออกแล้ว เพื่อให้ใช้เป้ากลางจอได้ตามปกติ)
         Debug.Log("เปิดอ่านโน้ต");
     }
 

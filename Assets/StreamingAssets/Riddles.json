@@ -2,6 +2,7 @@
   "riddles": [
     {
       "id": 1,
+      "type": "IFElse", 
       "text": "score = 75 ถ้า score >= 80 ให้พิมพ์ 'A'\n มิฉะนั้นพิมพ์ 'B'",
       "hint": " ให้มองว่า if คือการตั้งคำถาม จริงหรือไม่? โดยในที่นี้ถามว่า 75 มากกว่าหรือเท่ากับ 80 ใช่ไหม? ถ้าคำตอบคือ ไม่ใช่\n โปรแกรมจะกระโดดไปหา else ทันที",
       "choices": ["A", "B", "C", "D"],
@@ -9,6 +10,7 @@
     },
     {
       "id": 2,
+      "type": "IFElse",
       "text": "เงื่อนไขใดที่ใช้ตรวจสอบว่า x\n เป็นจำนวนคู่?",
       "hint": " เลขคู่คือเลขที่ หารด้วย 2 แล้วลงตัว คำว่าลงตัวในทางคอมพิวเตอร์หมายถึง หารแล้วเหลือเศษเป็น 0\n ลองนึกดูว่าเครื่องหมายตัวไหน (Operators) ที่ใช้สำหรับหาเศษ (Remainder)",
       "choices": ["x % 2 == 0", "X-000", "X% 2--0", "AAAAA"],
@@ -16,6 +18,7 @@
     },
     {
       "id": 3,
+      "type": "Loop",
       "text": "Uro?",
       "hint": " Uro",
       "choices": ["Hunter", "Uro", "Golf", "Dog"],
@@ -23,10 +26,59 @@
     },
     {
       "id": 4,
+      "type": "Loop",
       "text": "Golf?",
       "hint": " GOlf",
       "choices": ["Uro", "Hunter", "Golf", "Cat"],
       "correctAnswerIndex": 2
+    },
+      {
+      "id": 5,
+      "type": "Loop",
+      "text": "Hunter?",
+      "hint": " GOlf",
+      "choices": ["Uro", "Hunter", "Golf", "Cat"],
+      "correctAnswerIndex": 1
+    },
+      {
+      "id": 6,
+      "type": "Loop",
+      "text": "Four?",
+      "hint": " GOlf",
+      "choices": ["Uro", "Hunter", "Four", "Cat"],
+      "correctAnswerIndex": 2
+    },
+      {
+      "id": 7,
+      "type": "Array",
+      "text": "Car?",
+      "hint": " Car",
+      "choices": ["Cat", "CCCC", "Car", "Cold"],
+      "correctAnswerIndex": 2
+    },
+      {
+      "id": 8,
+      "type": "Array",
+      "text": "Cold?",
+      "hint": " Cold",
+      "choices": ["C", "CCCC", "CA", "Cold"],
+      "correctAnswerIndex": 3
+    },
+      {
+      "id": 9,
+      "type": "Array",
+      "text": "DDD?",
+      "hint": " DDD",
+      "choices": ["DCCC", "CCCC", "CaAAAr", "DDD"],
+      "correctAnswerIndex": 3
+    },
+      {
+      "id": 10,
+      "type": "Array",
+      "text": "AAAA?",
+      "hint": " AAAA",
+      "choices": ["AAAA", "CCCC", "Car", "Cold"],
+      "correctAnswerIndex": 0
     }
   ]
 }
