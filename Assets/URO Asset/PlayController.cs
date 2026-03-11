@@ -1,7 +1,7 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // เพิ่มเข้ามาสำหรับเช็คการคลิก UI
-using System.Collections.Generic; // เพิ่มเข้ามาสำหรับ List
-using UnityEngine.UI; // เพิ่มเข้ามาเพื่อเรียกใช้ Button
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,21 +13,37 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private float xRotation = 0f; 
 
-    // --- เพิ่มตัวแปรสำหรับจำว่าตอนนี้เป้าเล็ง "ทับปุ่มไหนอยู่" ---
     private GameObject currentHoveredButton;
+
+    // ตัวแปรเช็คว่าเมาส์เป็นอิสระอยู่ไหม
+    public bool isMouseFree = false;
 
     void Start()
     {
-        // ล็อกเป้าเมาส์ให้อยู่ตรงกลางจอ ไม่ให้หลุดขอบ (ซ่อนเมาส์จริง)
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        
-        // ดึงคอมโพเนนต์ Character Controller มาใช้งาน
+        LockMouse();
         controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
+        // --- กด ESC เพื่อสลับล็อก/ปลดล็อกเมาส์อย่างเดียว (ให้ PauseManager คุมระบบ UI แทน) ---
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isMouseFree = !isMouseFree; 
+
+            if (isMouseFree)
+            {
+                UnlockMouse(); 
+            }
+            else
+            {
+                LockMouse(); 
+            }
+        }
+
+        // ถ้าปลดล็อกเมาส์อยู่ ให้ข้ามคำสั่งเดินและหันหน้าจอไปเลย (เพื่อไม่ให้จอหันตามเมาส์)
+        if (isMouseFree) return;
+
         // --- 1. การมอง (หมุนกล้อง) ---
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -48,7 +64,6 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
         
-        // แรงโน้มถ่วงจำลอง
         Vector3 gravity = new Vector3(0, -9.81f, 0);
         controller.Move(gravity * Time.deltaTime);
 
@@ -58,23 +73,19 @@ public class PlayerController : MonoBehaviour
         // --- 4. ระบบเล็งแล้วคลิกตอบคำถาม ---
         if (Input.GetMouseButtonDown(0))
         {
-            // ถ้าคลิกซ้ายในขณะที่เป้ากำลังเล็งปุ่มอยู่พอดี
             if (currentHoveredButton != null)
             {
                 Button btn = currentHoveredButton.GetComponent<Button>();
                 if (btn != null)
                 {
-                    btn.onClick.Invoke(); // สั่งให้ปุ่มทำงาน
-                    Debug.Log("คลิกโดนปุ่ม: " + btn.name);
+                    btn.onClick.Invoke();
                 }
             }
         }
     }
 
-    // ฟังก์ชันยิงเลเซอร์ตรวจสอบว่าเป้าทับปุ่มอยู่ไหม (เอาไว้ทำสี Highlight)
     private void CheckCrosshairHover()
     {
-        // สร้างตัวแทนจุดคลิกไว้ที่ "กึ่งกลางหน้าจอ" เป๊ะๆ
         PointerEventData pointerData = new PointerEventData(EventSystem.current);
         pointerData.position = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
@@ -83,36 +94,49 @@ public class PlayerController : MonoBehaviour
 
         GameObject hitButton = null;
 
-        // ค้นหาว่าเลเซอร์ชนกับปุ่มไหม
         foreach (RaycastResult result in results)
         {
             Button btn = result.gameObject.GetComponentInParent<Button>();
             
-            // เช็คว่าเป็นปุ่ม และปุ่มนั้นยังกดได้อยู่ (interactable)
             if (btn != null && btn.interactable)
             {
                 hitButton = btn.gameObject;
-                break; // เจอตัวแรกที่โดนแล้วหยุดหาเลย
+                break; 
             }
         }
 
-        // ถ้าเป้าเล็งขยับไปโดนปุ่มใหม่ (หรือเลื่อนออกจากปุ่มเดิม)
         if (hitButton != currentHoveredButton)
         {
-            // 1. สั่งให้ปุ่มเก่า (ที่เลิกเล็งแล้ว) กลับเป็นสี Normal ปกติ
             if (currentHoveredButton != null)
             {
                 ExecuteEvents.Execute(currentHoveredButton, new PointerEventData(EventSystem.current), ExecuteEvents.pointerExitHandler);
             }
 
-            // 2. สั่งให้ปุ่มใหม่ (ที่เพิ่งเล็งโดน) เปลี่ยนเป็นสี Highlighted
             if (hitButton != null)
             {
                 ExecuteEvents.Execute(hitButton, new PointerEventData(EventSystem.current), ExecuteEvents.pointerEnterHandler);
             }
 
-            // อัปเดตความจำใหม่ ว่าตอนนี้เป้ากำลังทับปุ่มไหนอยู่
             currentHoveredButton = hitButton;
         }
+    }
+
+    private void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    // --- ฟังก์ชันนี้เอาไว้ให้ปุ่ม RESUME มาเรียกใช้ เพื่อล็อกเมาส์กลับเข้าที่ ---
+    public void ReturnToGame()
+    {
+        isMouseFree = false;
+        LockMouse();
     }
 }
