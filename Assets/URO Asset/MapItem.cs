@@ -55,7 +55,7 @@ public class MapItem : MonoBehaviour
     private void Update()
     {
         // เมื่อผู้เล่นกดปุ่ม E
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             // --- ถ้ากระดานนี้คือ "ประตูคำถาม" ---
             if (isQuestionBoard)
