@@ -3,82 +3,138 @@
     {
       "id": 1,
       "type": "IFElse", 
-      "text": "score = 75 ถ้า score >= 80 ให้พิมพ์ 'A'\n มิฉะนั้นพิมพ์ 'B'",
-      "hint": " ให้มองว่า if คือการตั้งคำถาม จริงหรือไม่? โดยในที่นี้ถามว่า 75 มากกว่าหรือเท่ากับ 80 ใช่ไหม? ถ้าคำตอบคือ ไม่ใช่\n โปรแกรมจะกระโดดไปหา else ทันที",
-      "choices": ["A", "B", "C", "D"],
+      "text": "โจทย์เกี่ยวกับการตรวจสอบจำนวนบวก\n let num = 10;if ( _______ ) {console.log(Positive number);}",
+      "hint": " จำนวนบวก (Positive number) คือตัวเลขทุกตัวที่มีค่า 'มากกว่าศูนย์' ขึ้นไป สัญลักษณ์ทางคณิตศาสตร์ตัวไหนที่ใช้แทนคำว่ามากกว่า",
+      "choices": [
+      "num = 0",
+      "num > 0",
+      "num >= 10",
+      "num === 0"],
       "correctAnswerIndex": 1 
     },
     {
       "id": 2,
       "type": "IFElse",
-      "text": "เงื่อนไขใดที่ใช้ตรวจสอบว่า x\n เป็นจำนวนคู่?",
-      "hint": " เลขคู่คือเลขที่ หารด้วย 2 แล้วลงตัว คำว่าลงตัวในทางคอมพิวเตอร์หมายถึง หารแล้วเหลือเศษเป็น 0\n ลองนึกดูว่าเครื่องหมายตัวไหน (Operators) ที่ใช้สำหรับหาเศษ (Remainder)",
-      "choices": ["x % 2 == 0", "X-000", "X% 2--0", "AAAAA"],
+      "text": "โจทย์การตรวจสอบ 'เลขคู่' (Even) หรือ 'เลขคี่' (Odd)\n let num = 7;if ( ________ ) {console.log(Even);} else {console.log(Odd);} ",
+      "hint": " เลขคู่คือตัวเลขที่หารด้วย 2 แล้ว 'ลงตัวพอดี' (ไม่มีเศษ) ใน JavaScript เราใช้เครื่องหมายอะไรในการหา'เศษ'ของการหาร",
+      "choices": [
+      "num % 2 === 0",
+      "num % 2 !== 0",
+      "num / 2 === 0",
+      "num === (Even)"],
       "correctAnswerIndex": 0
     },
     {
       "id": 3,
-      "type": "Loop",
-      "text": "Uro?",
-      "hint": " Uro",
-      "choices": ["Hunter", "Uro", "Golf", "Dog"],
+      "type": "IFElse",
+      "text": "โจทย์ข้อนี้ ซึ่งเป็นการตรวจสอบช่วงของอายุ(Age Range)ว่าอยู่ในเกณฑ์ที่กำหนดหรือไม่ (ตั้งแต่ 18 ถึง 60 ปี)\n let age = 25; if(/*if (age >= 18 && age <= 60) */) { console.log(\"Allowed\"); } else { console.log(\"Not Allowed\"); }",
+      "hint": " ลองนำตัวเลข 25 ไปแทนค่าในคำว่า age ดูสิ! 25 มีค่ามากกว่าหรือเท่ากับ 18 หรือไม่? 'และ' 25 มีค่าน้อยกว่าหรือเท่ากับ 60 หรือไม่? ถ้าเป็นจริงทั้งคู่โปรแกรมจะเลือกพิมพ์ข้อความในปีกกาแรกออกมา",
+      "choices": [
+      "25 Allowed", 
+      "Allowed",
+      "Not Allowed",
+      "Error"],
       "correctAnswerIndex": 1
     },
     {
       "id": 4,
-      "type": "Loop",
-      "text": "Golf?",
-      "hint": " GOlf",
-      "choices": ["Uro", "Hunter", "Golf", "Cat"],
+      "type": "IFElse",
+      "text": "let num = 30;if (num >= 10 && num <= 50) {  console.log(\"In range\");} else {  console.log(\"Out of range\");}",
+      "hint": " ลองนำเลข 30 ไปแทนค่าในตัวแปร num ดูสิ! 30 มีค่าตั้งแต่ 10 ขึ้นไป 'และ' ไม่เกิน 50 ใช่หรือไม่? ถ้าความจริงทั้งสองข้อนี้ถูกต้อง โปรแกรมจะเลือกแสดงข้อความชุดแรก",
+      "choices": [
+        "Out of range", 
+        "True", 
+        "In range", 
+        "30"],
       "correctAnswerIndex": 2
     },
       {
       "id": 5,
       "type": "Loop",
-      "text": "Hunter?",
-      "hint": " GOlf",
-      "choices": ["Uro", "Hunter", "Golf", "Cat"],
-      "correctAnswerIndex": 1
+      "text": ".let i = 5;for (let i = 0; i < 10; i++) { // some statements} console.log(i);",
+      "hint": " จำไว้ว่าคำสั่ง let มีขอบเขตการทำงานแค่ในปีกกา หรือที่เรียกว่า 'Block Scope' ตัวแปร i ที่ถูกสร้างขึ้นมาใหม่ในวงเล็บของ for loop จะมีอยู่แค่ข้างในลูปเท่านั้น",
+      "choices": [
+        "9", 
+        "10", 
+        "Error: Identifier 'i' has already been declared", 
+        "5"],
+      "correctAnswerIndex": 3
     },
       {
       "id": 6,
       "type": "Loop",
-      "text": "Four?",
-      "hint": " GOlf",
-      "choices": ["Uro", "Hunter", "Four", "Cat"],
+      "text": ".const cars = [\"BMW\", \"Volvo\", \"Saab\", \"Ford\"];let len = cars.length;let text = ]\"\";for (let i = 0; i < len; i++) {  text += cars[i] + \"<br>\";}",
+      "hint": " สังเกตเครื่องหมาย += ให้ดีๆ มันคือการ 'นำข้อความมาต่อท้ายกัน' ไปเรื่อยๆ และในแต่ละรอบของลูป จะมีการหยิบชื่อรถมาต่อด้วยคำว่า <br> เสมอ... คำถามคือ ในรอบสุดท้ายของการทำงาน คำว่า <br> จะยังถูกนำมาต่อท้ายด้วย",
+      "choices": [
+        "BMW<br>Volvo<br>Saab<br>Ford", 
+        "BMW,Volvo,Saab,Ford", 
+        "BMW<br>Volvo<br>Saab<br>Ford<br>", 
+        "Ford<br>"],
       "correctAnswerIndex": 2
     },
       {
       "id": 7,
-      "type": "Array",
-      "text": "Car?",
-      "hint": " Car",
-      "choices": ["Cat", "CCCC", "Car", "Cold"],
-      "correctAnswerIndex": 2
+      "type": "Loop",
+      "text": "const fruits = [\"apple\", \"banana\", \"cherry\"];for (let i = 0; i < fruits.length; i++) {console.log(fruits[i]);}",
+      "hint": " ในลูปนี้ ตัวแปร i จะมีค่าเปลี่ยนไปเรื่อยๆ คือ 0, 1 และ 2 ตามลำดับ การสั่ง fruits[i] คือการหยิบผลไม้ในกล่องตามตำแหน่งนั้นออกมา และอย่าลืมนะว่าคำสั่ง console.log() จะทำการปริ้นข้อความแล้ว 'ขึ้นบรรทัดใหม่'ทุกครั้ง!",
+      "choices": [
+      "apple banana cherry (แสดงติดกันในบรรทัดเดียว)", 
+      "0 แล้วขึ้นบรรทัดใหม่ 1 แล้วขึ้นบรรทัดใหม่ 2", 
+      "[\"apple", "banana", "cherry\"]", 
+      "apple แล้วขึ้นบรรทัดใหม่ banana แล้วขึ้นบรรทัดใหม่ cherry"],
+      "correctAnswerIndex": 3
     },
       {
       "id": 8,
-      "type": "Array",
-      "text": "Cold?",
-      "hint": " Cold",
-      "choices": ["C", "CCCC", "CA", "Cold"],
+      "type": "Loop",
+      "text": "let i, x = '';for (i = 0; i <= 5; i++) {  x += i;}",
+      "hint": " สังเกตค่าเริ่มต้นของตัวแปร x ให้ดีๆ นะ มันถูกกำหนดให้เป็นข้อความว่างเปล่า '' (String) ไม่ใช่ตัวเลข 0! ดังนั้นเมื่อใช้เครื่องหมาย += กับตัวเลข มันจะไม่ได้เอาเลขมาบวกกันทางคณิตศาสตร์ แต่จะเป็นการเอาตัวอักษรมา 'ต่อท้ายกัน' แทน ลองไล่ดูสิว่าลูปนี้เริ่มต้นที่เลขอะไร และจบที่เลขอะไร",
+      "choices": [
+      "15", 
+      "12345", 
+      "54321", 
+      "012345"],
       "correctAnswerIndex": 3
     },
       {
       "id": 9,
       "type": "Array",
-      "text": "DDD?",
-      "hint": " DDD",
-      "choices": ["DCCC", "CCCC", "CaAAAr", "DDD"],
+      "text": "let arr1 = [1, 2, 3];let arr2 = [4, 5, 6];let result = arr1.concat(arr2);console.log(result);",
+      "hint": " คำว่า concat ย่อมาจาก Concatenate หมายถึงการ 'นำมาต่อท้ายกัน' ลองนึกภาพว่าเรามีขบวนรถไฟสองขบวน (arr1 เป็นหัวขบวน และ arr2 เป็นท้ายขบวน) แล้วเอาขบวนที่สองมาเชื่อมต่อท้ายขบวนแรกดูสิ หน้าตาของขบวนรถไฟใหม่จะเรียงลำดับอย่างไร?",
+      "choices": [
+      "[5, 7, 9]",
+      "[1, 2, 3, [4, 5, 6]]",
+      "[4, 5, 6, 1, 2, 3]", 
+      "[1, 2, 3, 4, 5, 6]"],
       "correctAnswerIndex": 3
     },
       {
       "id": 10,
       "type": "Array",
-      "text": "AAAA?",
-      "hint": " AAAA",
-      "choices": ["AAAA", "CCCC", "Car", "Cold"],
+      "text": "let arr = [1, 2, 3];let firstElement = arr.shift();console.log(firstElement);console.log(arr);?",
+      "hint": " ลองจินตนาการว่า Array คือแถวตอนเรียงหนึ่ง คำสั่ง .shift() มีหน้าที่ 'ดึง' คนที่อยู่หน้าสุดของแถวออกไป! ลองคิดดูสิว่าใครคือคนที่อยู่หน้าสุดที่จะถูกดึงไปเก็บในตัวแปร firstElement และคนที่ยังเหลือยืนอยู่ในแถว arr จะมีใครบ้าง?",
+      "choices": [
+      "1 แล้วขึ้นบรรทัดใหม่ [2, 3]",
+      "[2, 3] แล้วขึ้นบรรทัดใหม่ 1",
+      "3 แล้วขึ้นบรรทัดใหม่ [1, 2]",
+      "1 แล้วขึ้นบรรทัดใหม่ [1, 2, 3]"],
       "correctAnswerIndex": 0
+    },
+    {
+      "id": 11,
+      "type": "Array",
+      "text": "let str = \"hello\";let result = Array.from(str);console.log(result);",
+      "hint": " คำสั่ง Array.from() มีหน้าที่สร้าง Array ตัวใหม่จากข้อมูลที่สามารถ 'แยกชิ้นส่วนได้' ลองนึกภาพว่าเราเอาข้อความคำว่า 'hello' ไปเข้าเครื่องหั่นหยาบๆ ให้กลายเป็นตัวอักษรทีละตัว แล้วจับแต่ละตัวมาใส่เรียงกันในกล่อง Array",
+      "choices": ["[\"hello\"]", "h,e,l,l,o", "[\"h", "e", "l", "l", "o\"]", "Error"],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": 12,
+      "type": "Array",
+      "text": "let numbers = [1, 2, 3, 4];let result = numbers.find(num => num > 2);console.log(result);",
+      "hint": " คำสั่ง .find() ทำหน้าที่เหมือน 'นักสืบที่ขี้เกียจ' ครับ พอได้รับภารกิจให้หาตัวเลขที่ 'มากกว่า 2' ทันทีที่มันเดินค้นหาใน Array จากซ้ายไปขวา แล้วเจอตัวเลข ตัวแรก ที่ตรงตามเงื่อนไข มันจะคว้าตัวเลขนั้นมาส่งให้เราแล้วเลิกหาต่อทันที!",
+      "choices": ["[3, 4]", "3", "4", "true"],
+      "correctAnswerIndex": 1
     }
   ]
 }

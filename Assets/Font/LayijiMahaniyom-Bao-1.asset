@@ -572,7 +572,7 @@ MonoBehaviour:
       m_Y: 1434
       m_Width: 139
       m_Height: 228
-    m_Scale: 1
+    m_Scale: 0.2
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
   - m_Index: 32
@@ -602,7 +602,7 @@ MonoBehaviour:
       m_Y: 2354
       m_Width: 141
       m_Height: 232
-    m_Scale: 1
+    m_Scale: 0
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
   - m_Index: 34
