@@ -19678,7 +19678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa2c94b2626e9458e11c445e33417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DatabaseManager
-  levelType: Array
+  levelType: IFElse
   puzzlesToSpawn: 2
   questionBoards:
   - {fileID: 677641965}
