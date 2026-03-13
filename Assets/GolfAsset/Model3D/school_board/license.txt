@@ -1,0 +1,11 @@
+Model Information:
+* title:	School board
+* source:	https://sketchfab.com/3d-models/school-board-ebc13b41fe0c4bac9c8fa6c3bc343e37
+* author:	Zixel (https://sketchfab.com/Zixel_3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "School board" (https://sketchfab.com/3d-models/school-board-ebc13b41fe0c4bac9c8fa6c3bc343e37) by Zixel (https://sketchfab.com/Zixel_3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

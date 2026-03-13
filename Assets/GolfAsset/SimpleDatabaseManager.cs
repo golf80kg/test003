@@ -32,7 +32,6 @@ public class SimpleDatabaseManager : MonoBehaviour
     private float totalPlayTimeCounter;
     private bool isTimerRunning = false;
 
-    // --- เพิ่มตัวแปรสำหรับระบบ Checkpoint ---
     private string lastSceneName; 
 
     void Awake() 
@@ -51,12 +50,15 @@ public class SimpleDatabaseManager : MonoBehaviour
     {
         nameInput = FindObjectOfType<TMP_InputField>();
 
-        // --- ระบบ Checkpoint: บันทึกชื่อฉากล่าสุดที่เข้าไปเล่น ---
-        // เราจะไม่บันทึกหน้าเมนู หน้าตาย หรือหน้ากรอกชื่อ
+        if (nameInput != null)
+        {
+            nameInput.characterLimit = 15;
+            Debug.Log("<color=green>System:</color> จำกัดการพิมพ์ชื่อไว้ที่ 15 ตัวอักษรแล้ว");
+        }
+
         if (scene.name != "MainMenu" && scene.name != "NamingScene" && scene.name != "GameOverScene")
         {
             lastSceneName = scene.name;
-            Debug.Log("<color=cyan>Checkpoint:</color> บันทึกฉากล่าสุดแล้ว -> " + lastSceneName);
         }
     }
 
@@ -74,16 +76,13 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
     }
 
-    // --- ฟังก์ชันควบคุมเวลา (ใช้เรียกจากสคริปต์ตาย/ปุ่ม Retry) ---
     public void SetTimerRunning(bool running)
     {
         isTimerRunning = running;
     }
 
-    // --- ฟังก์ชันดึงชื่อฉากล่าสุด (ใช้เรียกจากปุ่ม Retry) ---
     public string GetLastSceneName()
     {
-        // ถ้าไม่มีค่าบันทึกไว้ (เผื่อกรณีฉุกเฉิน) ให้ส่ง Scene1 กลับไป
         return string.IsNullOrEmpty(lastSceneName) ? "Scene1" : lastSceneName;
     }
 
@@ -93,31 +92,45 @@ public class SimpleDatabaseManager : MonoBehaviour
     }
 
     public void StartGameRecord() 
-{
-    if (nameInput != null)
     {
-        string newName = nameInput.text.Trim(); // ใช้ Trim เพื่อตัดช่องว่าง
-        
-        // ถ้าชื่อว่างเปล่าจริงๆ ไม่ควรให้โหลดฉากต่อ
-        if (string.IsNullOrEmpty(newName)) 
+        if (nameInput != null)
         {
-            Debug.LogError("StartGameRecord ถูกเรียกโดยไม่มีชื่อผู้เล่น!");
-            return; 
+            string newName = nameInput.text.Trim();
+            
+            if (string.IsNullOrEmpty(newName)) 
+            {
+                Debug.LogError("กรุณาใส่ชื่อผู้เล่น!");
+                return; 
+            }
+
+            if (newName.Length > 15)
+            {
+                newName = newName.Substring(0, 15);
+            }
+            
+            tempPlayerName = newName;
         }
         
-        tempPlayerName = newName;
+        totalPlayTimeCounter = 0; 
+        isTimerRunning = true;
+        SceneManager.LoadScene("Scene1"); 
     }
-    // ... ส่วนที่เหลือของโค้ด ...
-    totalPlayTimeCounter = 0; 
-    isTimerRunning = true;
-    SceneManager.LoadScene("Scene1"); 
-}
 
+    // --- [จุดที่แก้ไข] ---
     public void FinishAndSaveGame() 
     {
         isTimerRunning = false;
         LoadDatabase();
-        db.players.Add(new PlayerData { playerName = tempPlayerName, totalPlayTime = totalPlayTimeCounter });
+
+        // ใช้ System.Math.Round เพื่อปัดเศษทศนิยมเหลือ 2 ตำแหน่งก่อนบันทึก
+        // คราวนี้ในไฟล์ JSON จะเก็บแค่เลขสวยๆ เช่น 155.62
+        float roundedTime = (float)System.Math.Round(totalPlayTimeCounter, 2);
+
+        db.players.Add(new PlayerData { 
+            playerName = tempPlayerName, 
+            totalPlayTime = roundedTime 
+        });
+
         SaveToDisk();
     }
 
@@ -137,7 +150,11 @@ public class SimpleDatabaseManager : MonoBehaviour
         }
     }
 
-    public List<PlayerData> GetPlayerList() { LoadDatabase(); return db.players.OrderBy(p => p.totalPlayTime).ToList(); }
+    public List<PlayerData> GetPlayerList() 
+    { 
+        LoadDatabase(); 
+        return db.players.OrderBy(p => p.totalPlayTime).ToList(); 
+    }
 
     public void BackToMenu()
     {
