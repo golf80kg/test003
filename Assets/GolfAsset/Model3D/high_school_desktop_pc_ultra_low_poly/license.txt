@@ -1,0 +1,11 @@
+Model Information:
+* title:	High School Desktop PC [ULTRA LOW POLY]
+* source:	https://sketchfab.com/3d-models/high-school-desktop-pc-ultra-low-poly-888abfa0e6a64d96b97113dbf8d5ce16
+* author:	BlueMesh (https://sketchfab.com/VapTor)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "High School Desktop PC [ULTRA LOW POLY]" (https://sketchfab.com/3d-models/high-school-desktop-pc-ultra-low-poly-888abfa0e6a64d96b97113dbf8d5ce16) by BlueMesh (https://sketchfab.com/VapTor) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Paper - 3MB
+* source:	https://sketchfab.com/3d-models/paper-3mb-11e09eebb27c470d9abb8f47d4749aef
+* author:	Mehdi Shahsavan (https://sketchfab.com/ahmagh2e)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Paper - 3MB" (https://sketchfab.com/3d-models/paper-3mb-11e09eebb27c470d9abb8f47d4749aef) by Mehdi Shahsavan (https://sketchfab.com/ahmagh2e) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
