@@ -16720,7 +16720,6 @@ MonoBehaviour:
   - {fileID: 792157418}
   - {fileID: 967903063}
   - {fileID: 314649190}
-  - {fileID: 0}
   tutorialPanel: {fileID: 1350247862}
 --- !u!1001 &1516513170
 PrefabInstance:
