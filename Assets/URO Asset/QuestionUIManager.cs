@@ -14,10 +14,11 @@ public class QuestionUIManager : MonoBehaviour
     public TextMeshProUGUI[] choiceTexts; 
 
     [Header("ตั้งค่าระบบคูลดาวน์")] 
-    public float cooldownTime = 3.0f; // เวลาคูลดาวน์ (วินาที)
+    public float cooldownTime = 3.0f; 
 
-    [Header("ตั้งค่ากำแพงที่จะเปิด")] // <--- เพิ่มหัวข้อใหม่
-    public GameObject doorToOpen; // <--- เพิ่มช่องสำหรับลากโมเดลกำแพงมาใส่
+    [Header("ตั้งค่ากำแพงและโน้ตที่จะให้หายไป")] 
+    public GameObject doorToOpen; 
+    public MapItem noteToDestroy; // <--- เพิ่มช่องสำหรับลากสมุดโน้ตมาใส่
 
     private int correctIndex; 
     private bool isCooldown = false; 
@@ -54,11 +55,15 @@ public class QuestionUIManager : MonoBehaviour
         {
             Debug.Log("ตอบถูก! ผ่านได้");
             
-            // <--- คำสั่งทำลาย/ซ่อนกำแพง เมื่อตอบถูก
             if (doorToOpen != null)
             {
-                doorToOpen.SetActive(false); // สั่งให้กำแพงบล็อกนี้หายไป
-                Debug.Log("กำแพงเปิดแล้ว!");
+                doorToOpen.SetActive(false); 
+            }
+
+            // <--- สั่งประหารโน้ตคำใบ้ตรงนี้ --->
+            if (noteToDestroy != null)
+            {
+                noteToDestroy.ForceDestroyNote();
             }
 
             CloseQuestion(); 
@@ -74,19 +79,19 @@ public class QuestionUIManager : MonoBehaviour
     {
         questionPanel.SetActive(false); 
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // ส่งสัญญาณบอก PlayerController ให้ล็อกเมาส์กลับ (ถ้าคุณใช้ระบบ PauseManager ให้คงบรรทัดนี้ไว้ครับ)
+        PlayerController player = FindAnyObjectByType<PlayerController>();
+        if(player != null) player.ReturnToGame();
     }
 
     private IEnumerator WrongAnswerCooldown()
     {
         isCooldown = true; 
-        
         float remainingTime = cooldownTime; 
 
         while (remainingTime > 0)
         {
-            questionText.text = "<color=red>ตอบผิด!</color>\n กรุณารอ " + Mathf.CeilToInt(remainingTime) + " วินาที...แล้วกลับมาตอบใหม่";
+            questionText.text = "<color=red>ตอบผิด!</color>\n กรุณารอ " + Mathf.CeilToInt(remainingTime) + " วินาที...";
             remainingTime -= Time.deltaTime;
             yield return null; 
         }
