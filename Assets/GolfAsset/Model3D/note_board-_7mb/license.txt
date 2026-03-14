@@ -1,0 +1,11 @@
+Model Information:
+* title:	Note Board- 7MB
+* source:	https://sketchfab.com/3d-models/note-board-7mb-31579aa0806c43548f2b54fdc1a0803b
+* author:	adventurer (https://sketchfab.com/ahmagh2e)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Note Board- 7MB" (https://sketchfab.com/3d-models/note-board-7mb-31579aa0806c43548f2b54fdc1a0803b) by adventurer (https://sketchfab.com/ahmagh2e) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

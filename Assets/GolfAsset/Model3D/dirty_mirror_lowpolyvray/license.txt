@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dirty mirror Lowpoly(Vray)
+* source:	https://sketchfab.com/3d-models/dirty-mirror-lowpolyvray-703e1fbca544462f8451f96c9912aa47
+* author:	mama619 (https://sketchfab.com/mama619)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dirty mirror Lowpoly(Vray)" (https://sketchfab.com/3d-models/dirty-mirror-lowpolyvray-703e1fbca544462f8451f96c9912aa47) by mama619 (https://sketchfab.com/mama619) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

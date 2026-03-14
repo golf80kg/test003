@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bibliothèque antique | Antique library
+* source:	https://sketchfab.com/3d-models/bibliotheque-antique-antique-library-742fbdd5bf314a488494a4afdba92b25
+* author:	Audrey Langlois (https://sketchfab.com/AudreyLanglois)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bibliothèque antique | Antique library" (https://sketchfab.com/3d-models/bibliotheque-antique-antique-library-742fbdd5bf314a488494a4afdba92b25) by Audrey Langlois (https://sketchfab.com/AudreyLanglois) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
