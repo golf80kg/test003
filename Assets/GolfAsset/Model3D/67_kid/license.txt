@@ -1,0 +1,11 @@
+Model Information:
+* title:	67 Kid
+* source:	https://sketchfab.com/3d-models/67-kid-ffe376fb6461407899a511800b86ab1a
+* author:	Mattbowser64 (https://sketchfab.com/mattbowser64)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "67 Kid" (https://sketchfab.com/3d-models/67-kid-ffe376fb6461407899a511800b86ab1a) by Mattbowser64 (https://sketchfab.com/mattbowser64) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
