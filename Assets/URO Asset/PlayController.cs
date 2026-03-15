@@ -9,13 +9,14 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float mouseSensitivity = 200.0f;
     public Transform playerCamera; 
+
+    [Header("--- ตั้งค่าระยะการกดปุ่ม UI ---")]
+    public float maxInteractDistance = 4.0f; // <--- ปรับระยะห่างที่ยอมให้คลิกปุ่มได้ตรงนี้ (หน่วยเป็นเมตร)
     
     private CharacterController controller;
     private float xRotation = 0f; 
 
     private GameObject currentHoveredButton;
-
-    // ตัวแปรเช็คว่าเมาส์เป็นอิสระอยู่ไหม
     public bool isMouseFree = false;
 
     void Start()
@@ -26,7 +27,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // --- กด ESC เพื่อสลับล็อก/ปลดล็อกเมาส์อย่างเดียว (ให้ PauseManager คุมระบบ UI แทน) ---
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isMouseFree = !isMouseFree; 
@@ -41,10 +41,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // ถ้าปลดล็อกเมาส์อยู่ ให้ข้ามคำสั่งเดินและหันหน้าจอไปเลย (เพื่อไม่ให้จอหันตามเมาส์)
         if (isMouseFree) return;
 
-        // --- 1. การมอง (หมุนกล้อง) ---
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -57,7 +55,6 @@ public class PlayerController : MonoBehaviour
             playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
 
-        // --- 2. การเดิน (Movement) ---
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -67,10 +64,8 @@ public class PlayerController : MonoBehaviour
         Vector3 gravity = new Vector3(0, -9.81f, 0);
         controller.Move(gravity * Time.deltaTime);
 
-        // --- 3. เช็คการเล็งเป้า (ทำงานตลอดเวลาเพื่อเปลี่ยนสีปุ่ม) ---
         CheckCrosshairHover();
 
-        // --- 4. ระบบเล็งแล้วคลิกตอบคำถาม ---
         if (Input.GetMouseButtonDown(0))
         {
             if (currentHoveredButton != null)
@@ -96,6 +91,9 @@ public class PlayerController : MonoBehaviour
 
         foreach (RaycastResult result in results)
         {
+            // <--- จุดที่เพิ่มใหม่: เช็คว่าระยะเลเซอร์ที่ยิงไปโดน ไกลเกินระยะที่ตั้งไว้หรือไม่ --->
+            if (result.distance > maxInteractDistance) continue; // ถ้าไกลเกินไป ข้ามไปเลย (ไม่ให้กด)
+
             Button btn = result.gameObject.GetComponentInParent<Button>();
             
             if (btn != null && btn.interactable)
@@ -133,7 +131,6 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = true;
     }
 
-    // --- ฟังก์ชันนี้เอาไว้ให้ปุ่ม RESUME มาเรียกใช้ เพื่อล็อกเมาส์กลับเข้าที่ ---
     public void ReturnToGame()
     {
         isMouseFree = false;

@@ -1179,6 +1179,7 @@ GameObject:
   - component: {fileID: 22613012}
   - component: {fileID: 22613011}
   - component: {fileID: 22613010}
+  - component: {fileID: 22613015}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -1303,6 +1304,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &22613015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22613009}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5738242, y: 0.99999994, z: 17.739597}
+  m_Center: {x: -0.031819116, y: 0, z: -8.369799}
 --- !u!1 &22628686
 GameObject:
   m_ObjectHideFlags: 0
@@ -15223,7 +15245,7 @@ Transform:
   m_GameObject: {fileID: 604819257}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.3, y: 1.12, z: 15.0242}
+  m_LocalPosition: {x: 12.3, y: 1.12, z: -40.4}
   m_LocalScale: {x: -32.70621, y: 0.19957, z: 52.388023}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36603,6 +36625,7 @@ GameObject:
   - component: {fileID: 1482720455}
   - component: {fileID: 1482720454}
   - component: {fileID: 1482720453}
+  - component: {fileID: 1482720458}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -36727,6 +36750,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1482720458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482720452}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8035074, y: 1, z: 3.9474032}
+  m_Center: {x: -0.1104112, y: 0, z: 1.4737015}
 --- !u!1001 &1492609996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49724,6 +49768,7 @@ MonoBehaviour:
   speed: 5
   mouseSensitivity: 100
   playerCamera: {fileID: 1110764717}
+  maxInteractDistance: 4
   isMouseFree: 0
 --- !u!143 &2044828226
 CharacterController:

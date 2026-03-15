@@ -2516,6 +2516,7 @@ GameObject:
   - component: {fileID: 171649021}
   - component: {fileID: 171649020}
   - component: {fileID: 171649019}
+  - component: {fileID: 171649024}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -2640,6 +2641,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &171649024
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171649018}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.819151, y: 0.99999994, z: 17.376617}
+  m_Center: {x: 0.075638555, y: 0, z: -8.188311}
 --- !u!1 &172565234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6453,6 +6475,7 @@ GameObject:
   - component: {fileID: 523813955}
   - component: {fileID: 523813954}
   - component: {fileID: 523813953}
+  - component: {fileID: 523813958}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -6577,6 +6600,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &523813958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523813952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.227534, y: 0.99999994, z: 16.860798}
+  m_Center: {x: -0.1587683, y: 0, z: -7.9303994}
 --- !u!1 &532160731
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,6 +9913,7 @@ MonoBehaviour:
   speed: 5
   mouseSensitivity: 100
   playerCamera: {fileID: 1767903436}
+  maxInteractDistance: 4
   isMouseFree: 0
 --- !u!143 &898076711
 CharacterController:
