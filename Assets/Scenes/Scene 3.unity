@@ -19750,7 +19750,7 @@ MonoBehaviour:
   ai: {fileID: 774211501}
   player: {fileID: 2044828224}
   playerCam: {fileID: 1110764713}
-  aiSpeed: 5
+  aiSpeed: 2
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 48ed5465fbd041c4db01885834b7cdee, type: 3}
   jumpScareUI: {fileID: 0}
@@ -23509,7 +23509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &949638574
 Transform:
   m_ObjectHideFlags: 0

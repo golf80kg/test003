@@ -10553,7 +10553,7 @@ MonoBehaviour:
   ai: {fileID: 965236516}
   player: {fileID: 1405016312}
   playerCam: {fileID: 330585545}
-  aiSpeed: 5
+  aiSpeed: 2
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 48ed5465fbd041c4db01885834b7cdee, type: 3}
   jumpScareUI: {fileID: 0}
