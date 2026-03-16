@@ -5,10 +5,12 @@ public class StalkerAI : MonoBehaviour
 {
     public NavMeshAgent ai;
     public Transform player;
-    public float viewDistance = 15f; // ระยะการมองเห็น
-    public float wanderRadius = 10f; // ระยะสุ่มเดิน
-    public float aiSpeedWander = 2f; // ความเร็วตอนเดินสุ่ม
-    public float aiSpeedChase = 5f;  // ความเร็วตอนวิ่งไล่
+    public Animator anim; // <--- ช่องนี้จะโผล่มาให้ลากแล้วครับ!
+    
+    public float viewDistance = 15f; 
+    public float wanderRadius = 10f; 
+    public float aiSpeedWander = 2f; 
+    public float aiSpeedChase = 5f;  
 
     private Vector3 lastKnownPosition;
     private bool isChasing = false;
@@ -16,20 +18,23 @@ public class StalkerAI : MonoBehaviour
 
     void Update()
     {
+        // สั่งให้อนิเมชั่นทำงานตามความเร็วที่ AI เดินจริง
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", ai.velocity.magnitude);
+        }
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        // 1. เช็กว่าผู้เล่นอยู่ในระยะและไม่มีอะไรบังตาหรือไม่
         if (distanceToPlayer < viewDistance && CanSeePlayer())
         {
             StartChasing();
         }
         else if (isChasing)
         {
-            // 2. ถ้าผู้เล่นหายไป ให้ไปที่จุดล่าสุดที่เห็น
             LostPlayer();
         }
 
-        // 3. จัดการการเคลื่อนที่ตามสถานะ
         if (!isChasing && !investigatingLastPos && !ai.pathPending && ai.remainingDistance < 0.5f)
         {
             Wander();
@@ -40,6 +45,7 @@ public class StalkerAI : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 direction = player.position - transform.position;
+        // ปรับจุดยิง Ray ให้สูงขึ้นนิดหน่อยจะได้ไม่ติดพื้น
         if (Physics.Raycast(transform.position + Vector3.up, direction, out hit, viewDistance))
         {
             if (hit.transform.CompareTag("Player")) return true;
@@ -61,8 +67,7 @@ public class StalkerAI : MonoBehaviour
         isChasing = false;
         investigatingLastPos = true;
         ai.SetDestination(lastKnownPosition);
-        // เมื่อถึงจุดล่าสุดแล้วจะหยุดมอง (เช็กใน Update)
-        Invoke("FinishInvestigating", 3f); // หยุดมอง 3 วินาที
+        Invoke("FinishInvestigating", 3f); 
     }
 
     void FinishInvestigating()
