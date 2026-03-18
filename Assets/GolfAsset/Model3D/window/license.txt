@@ -1,0 +1,11 @@
+Model Information:
+* title:	Window
+* source:	https://sketchfab.com/3d-models/window-8322ed18bb434f74868fd569fc48b057
+* author:	Shenlung1994 (https://sketchfab.com/Shenlung1994)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Window" (https://sketchfab.com/3d-models/window-8322ed18bb434f74868fd569fc48b057) by Shenlung1994 (https://sketchfab.com/Shenlung1994) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

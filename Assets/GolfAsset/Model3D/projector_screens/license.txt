@@ -1,0 +1,11 @@
+Model Information:
+* title:	Projector Screens
+* source:	https://sketchfab.com/3d-models/projector-screens-77b3edbe67e5411fa21f07b16196098b
+* author:	RackRibs (https://sketchfab.com/RackRibs)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Projector Screens" (https://sketchfab.com/3d-models/projector-screens-77b3edbe67e5411fa21f07b16196098b) by RackRibs (https://sketchfab.com/RackRibs) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

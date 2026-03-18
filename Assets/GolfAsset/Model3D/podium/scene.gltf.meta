@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 7120ff371f9720944bb81f2066bbd39e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\GolfAsset\Model3D\podium\scene.bin
+    assetPath: Assets\GolfAsset\Model3D\podium\scene.bin
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3D\podium\textures\Color_A08_baseColor.jpeg
+    assetPath: Assets\GolfAsset\Model3D\podium\textures\Color_A08_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3D\podium\textures\Color_A08_specularf0.png
+    assetPath: Assets\GolfAsset\Model3D\podium\textures\Color_A08_specularf0.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3D\podium\textures\walnut_pastrengo_baseColor.jpeg
+    assetPath: Assets\GolfAsset\Model3D\podium\textures\walnut_pastrengo_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3D\podium\textures\dd34c0f5207f2d78aedc0846841f489b_baseColor.png
+    assetPath: Assets\GolfAsset\Model3D\podium\textures\dd34c0f5207f2d78aedc0846841f489b_baseColor.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
