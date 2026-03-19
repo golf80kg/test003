@@ -2875,7 +2875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &51335403
 Transform:
   m_ObjectHideFlags: 0
@@ -24048,7 +24048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e5bbfcb34e81549a4a114836abfb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndGame
-  mainMenuName: MainMenu
+  mainMenuName: EndingScene
 --- !u!65 &508658489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32658,7 +32658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &669479554
 Transform:
   m_ObjectHideFlags: 0
@@ -47951,7 +47951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &966715429
 Transform:
   m_ObjectHideFlags: 0
@@ -61218,7 +61218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1219600721
 Transform:
   m_ObjectHideFlags: 0
@@ -90927,7 +90927,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 944e50f681625a74a8ec44e6236f7b3d, type: 2}
   m_BuildHeightMesh: 0
 --- !u!64 &1896763659
 MeshCollider:
@@ -99173,7 +99173,7 @@ Transform:
   m_GameObject: {fileID: 2044828223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.008, y: 0.969, z: -54.22}
+  m_LocalPosition: {x: 43.008, y: 10.493, z: -120.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
