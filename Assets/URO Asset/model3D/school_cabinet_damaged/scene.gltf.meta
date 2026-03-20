@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: d0640b62d1b3eec4dbfa915e01f7899a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\scene.bin
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\scene.bin
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Base_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Kapak_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\material_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\mentese_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\vida_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_2_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\metal_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bootle_2_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\Books_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_normal.png
+    assetPath: Assets\URO Asset\model3D\school_locker\school_cabinet_damaged\textures\bottle_1_normal.png
+  reportItems: []

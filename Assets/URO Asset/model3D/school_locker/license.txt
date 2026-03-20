@@ -1,0 +1,11 @@
+Model Information:
+* title:	SCHOOL LOCKER
+* source:	https://sketchfab.com/3d-models/school-locker-1ea07e4cb6dc404fa5fa597a0211474d
+* author:	Lee Studio (https://sketchfab.com/big5)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SCHOOL LOCKER" (https://sketchfab.com/3d-models/school-locker-1ea07e4cb6dc404fa5fa597a0211474d) by Lee Studio (https://sketchfab.com/big5) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Killer Mask
+* source:	https://sketchfab.com/3d-models/killer-mask-8b875556fb614b47ab68c7638c88fb2b
+* author:	JohnPhillips (https://sketchfab.com/JohnPhillips)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Killer Mask" (https://sketchfab.com/3d-models/killer-mask-8b875556fb614b47ab68c7638c88fb2b) by JohnPhillips (https://sketchfab.com/JohnPhillips) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	WORKSHOP_정채원 2
+* source:	https://sketchfab.com/3d-models/workshop--2-3296b3ec233a4c87a7a5d44d98a3f6ab
+* author:	HUMANITY ARCHIVER (https://sketchfab.com/Humanityarchiver)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "WORKSHOP_정채원 2" (https://sketchfab.com/3d-models/workshop--2-3296b3ec233a4c87a7a5d44d98a3f6ab) by HUMANITY ARCHIVER (https://sketchfab.com/Humanityarchiver) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
