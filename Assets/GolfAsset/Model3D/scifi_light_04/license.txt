@@ -1,0 +1,11 @@
+Model Information:
+* title:	SciFi Light 04
+* source:	https://sketchfab.com/3d-models/scifi-light-04-97461e7908fa4053b3478dc8e7c542dd
+* author:	inuhitman (https://sketchfab.com/inuhitman)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "SciFi Light 04" (https://sketchfab.com/3d-models/scifi-light-04-97461e7908fa4053b3478dc8e7c542dd) by inuhitman (https://sketchfab.com/inuhitman) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
