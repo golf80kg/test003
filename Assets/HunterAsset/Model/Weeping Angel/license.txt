@@ -1,0 +1,11 @@
+Model Information:
+* title:	weeping angel
+* source:	https://sketchfab.com/3d-models/weeping-angel-2740584193a248a098bfc78838e8a5f5
+* author:	tiana (https://sketchfab.com/tianageorge)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "weeping angel" (https://sketchfab.com/3d-models/weeping-angel-2740584193a248a098bfc78838e8a5f5) by tiana (https://sketchfab.com/tianageorge) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
