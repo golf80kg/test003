@@ -84,12 +84,19 @@ public class MapItem : MonoBehaviour
         }
     }
 
-    void CollectNote()
+   void CollectNote()
     {
         isCollected = true;
         isPlayerInRange = false; 
 
-        if (GetComponent<MeshRenderer>() != null) GetComponent<MeshRenderer>().enabled = false; 
+        // 1. ค้นหา MeshRenderer ทั้งที่ตัวแม่และตัวลูกทั้งหมด แล้วสั่งปิดทีละตัว
+        MeshRenderer[] allMeshes = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer mesh in allMeshes)
+        {
+            mesh.enabled = false;
+        }
+
+        // 2. ปิดกรอบชน เพื่อไม่ให้เดินชนซ้ำ
         if (GetComponent<BoxCollider>() != null) GetComponent<BoxCollider>().enabled = false; 
 
         Debug.Log("เก็บโน้ตคำใบ้แล้ว! (กด Q เพื่อเปิดอ่าน)");

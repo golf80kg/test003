@@ -1,0 +1,320 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        16.089326858520508,
+        1.7271461486816406,
+        19.797372817993164
+      ],
+      "min": [
+        -16.34817123413086,
+        -3.5312347412109375,
+        0.022565841674804688
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 786384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.99996018409729,
+        0.9927096366882324,
+        0.9999998807907104
+      ],
+      "min": [
+        -0.9990301728248596,
+        -0.9999980926513672,
+        -0.9999736547470093
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9978637099266052,
+        0.9671629667282104
+      ],
+      "min": [
+        0.0001220703125,
+        0.00013263954315334558
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 345222,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 41926,
+      "max": [
+        16.089326858520508,
+        2.076416015625,
+        19.97723388671875
+      ],
+      "min": [
+        -16.34817123413086,
+        -3.655978202819824,
+        -0.36911487579345703
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2075880,
+      "componentType": 5126,
+      "count": 41926,
+      "max": [
+        0.9999665021896362,
+        0.9927096366882324,
+        0.9999667406082153
+      ],
+      "min": [
+        -0.9990301728248596,
+        -0.9999938011169434,
+        -0.9993722438812256
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 524256,
+      "componentType": 5126,
+      "count": 41926,
+      "max": [
+        0.9997156262397766,
+        0.9798582792282104
+      ],
+      "min": [
+        0.0001220703125,
+        0.0001281691947951913
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1380888,
+      "componentType": 5125,
+      "count": 191124,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "matousekfoto (https://sketchfab.com/matousekfoto)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/notice-board-foam-7a4f32929cc54ca6b40415bc2817a33d",
+      "title": "Notice board foam"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2145384,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 859664,
+      "byteOffset": 2145384,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2578992,
+      "byteOffset": 3005048,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5584040,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/foam-notice_Model_u1_v1_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "foam-notice_Model_u1_v1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "foam-notice_Model_foam-notice_Model_u1_v1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "foam-notice_Model_foam-notice_Model_u1_v1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -0.005633998152814068,
+        0.0023781163480045453,
+        0.04504129695744474,
+        0.0,
+        0.045061982479100315,
+        0.002256406538379384,
+        0.005517450410376768,
+        0.0,
+        -0.0019472274154953007,
+        0.045336177399748934,
+        -0.002637254830137704,
+        0.0,
+        -0.596015453338623,
+        0.06042513623833629,
+        1.2062655687332153,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "foam-notice_Model.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        7.549789959870878e-06,
+        1.1102230246251565e-14,
+        99.99999999999972,
+        0.0,
+        99.99999999999962,
+        -4.371139006309477e-06,
+        -7.549789954319763e-06,
+        0.0,
+        4.371139006309477e-06,
+        99.99999999999991,
+        -3.552713678800501e-13,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "foam-notice_Model"
+    },
+    {
+      "mesh": 0,
+      "name": "foam-notice_Model_foam-notice_Model_u1_v1_0"
+    },
+    {
+      "mesh": 1,
+      "name": "foam-notice_Model_foam-notice_Model_u1_v1_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
