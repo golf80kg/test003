@@ -67499,12 +67499,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.95
+  m_fontSize: 2
   m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 0.3
-  m_fontSizeMax: 4
+  m_fontSizeMin: 0.1
+  m_fontSizeMax: 2
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -67538,7 +67538,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.9000711, y: 2.0642128, z: 9.513641, w: 0.39529777}
+  m_margin: {x: -1.9000711, y: 2.0642128, z: 9.513641, w: 1.747378}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -75887,7 +75887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: bdc8507839ae26a4b9da11d1647059f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.075
+      value: -33.156
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: bdc8507839ae26a4b9da11d1647059f2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -80213,7 +80213,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.5
+  m_fontSize: 2.55
   m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -80252,7 +80252,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 4.23573, y: 0.5392611, z: 3.9703083, w: 3.2183988}
+  m_margin: {x: 4.23573, y: 0.5392611, z: 3.9703083, w: 3.200751}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -95325,6 +95325,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 22613009}
   noteToDestroy: {fileID: 1863372336}
+  MapSystem: {fileID: 1239954039}
 --- !u!4 &1392319418
 Transform:
   m_ObjectHideFlags: 0
@@ -108392,6 +108393,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 1482720452}
   noteToDestroy: {fileID: 699560889}
+  MapSystem: {fileID: 1750362346}
 --- !u!1001 &1593170233
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4332,6 +4332,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 1409110034}
   noteToDestroy: {fileID: 1877231861}
+  MapSystem: {fileID: 0}
 --- !u!4 &357362323
 Transform:
   m_ObjectHideFlags: 0
@@ -14103,7 +14104,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.95
+  m_fontSize: 2.4
   m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14142,7 +14143,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.9000711, y: 2.0642128, z: 9.513641, w: 0.39529777}
+  m_margin: {x: -1.9000711, y: 2.0642128, z: 9.513641, w: 1.7487885}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15863,6 +15864,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 677641960}
   noteToDestroy: {fileID: 1160418702}
+  MapSystem: {fileID: 0}
 --- !u!4 &1464632313
 Transform:
   m_ObjectHideFlags: 0

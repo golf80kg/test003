@@ -19,6 +19,8 @@ public class QuestionUIManager : MonoBehaviour
     [Header("ตั้งค่ากำแพงและโน้ตที่จะให้หายไป")] 
     public GameObject doorToOpen; 
     public MapItem noteToDestroy; // <--- เพิ่มช่องสำหรับลากสมุดโน้ตมาใส่
+    [Header("ตั้งค่าแมพให้หายไป")]
+    public GameObject MapSystem; // ช่องสำหรับลากแมพของเพื่อนมาใส่
 
     private int correctIndex; 
     private bool isCooldown = false; 
@@ -64,6 +66,13 @@ public class QuestionUIManager : MonoBehaviour
             if (noteToDestroy != null)
             {
                 noteToDestroy.ForceDestroyNote();
+            }
+
+            // <--- เพิ่มตรงนี้! สั่งปิดระบบแมพของเพื่อนเมื่อตอบถูก --->
+            if (MapSystem != null)
+            {
+                MapSystem.SetActive(false);
+                Debug.Log("ปิดแมพของเพื่อนเรียบร้อย!");
             }
 
             CloseQuestion(); 
