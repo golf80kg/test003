@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wood Stairs
+* source:	https://sketchfab.com/3d-models/wood-stairs-b8024273efcb4327a232958a96246da2
+* author:	FrankCrossNC (https://sketchfab.com/FrankCrossNC)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wood Stairs" (https://sketchfab.com/3d-models/wood-stairs-b8024273efcb4327a232958a96246da2) by FrankCrossNC (https://sketchfab.com/FrankCrossNC) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
