@@ -1,0 +1,258 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1356,
+      "max": [
+        5.405271053314209,
+        -0.15648700296878815,
+        0.928413987159729
+      ],
+      "min": [
+        5.060831069946289,
+        -0.5407180190086365,
+        0.000590000010561198
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16272,
+      "componentType": 5126,
+      "count": 1356,
+      "max": [
+        0.9998623132705688,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9998894929885864,
+        -0.9999992847442627,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1356,
+      "max": [
+        0.9996349811553955,
+        0.9997959733009338
+      ],
+      "min": [
+        0.00020399999630171806,
+        0.00020399999630171806
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7008,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 32544,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        5.290975093841553,
+        -0.24846899509429932,
+        0.11261600255966187
+      ],
+      "min": [
+        5.176324844360352,
+        -0.3631190061569214,
+        0.10382899641990662
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 36384,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        0.9987987875938416,
+        0.9987987875938416,
+        0.934080958366394
+      ],
+      "min": [
+        -0.9987987875938416,
+        -0.9987987875938416,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10848,
+      "componentType": 5126,
+      "count": 320,
+      "max": [
+        0.2276410013437271,
+        0.9903389811515808
+      ],
+      "min": [
+        0.028263000771403313,
+        0.7909600138664246
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 28032,
+      "componentType": 5125,
+      "count": 1626,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "1239899282 (https://sketchfab.com/1239899282)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/toilet-a-192a2586df184caf89b2998148e249d8",
+      "title": "Toilet A"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 34536,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13408,
+      "byteOffset": 34536,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 40224,
+      "byteOffset": 47944,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 88168,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "metallicFactor": 0.23312058016368292,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": ".001",
+      "pbrMetallicRoughness": {
+        "roughnessFactor": 0.387927161708708
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "name": "ToiletA.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

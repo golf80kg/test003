@@ -1,0 +1,67 @@
+fileFormatVersion: 2
+guid: 7f997e666db429b478d9b1b214cc3c0a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\URO Asset\model3D\easel_standee\scene.bin
+    assetPath: Assets\URO Asset\model3D\easel_standee\scene.bin
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\White_Board_baseColor.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\White_Board_baseColor.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\White_Board_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\White_Board_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\White_Board_emissive.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\White_Board_emissive.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\White_Board_normal.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\White_Board_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_baseColor.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_baseColor.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_emissive.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_emissive.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_normal.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Wood_Stand_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Support_baseColor.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Support_baseColor.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Support_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Support_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Support_emissive.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Support_emissive.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\easel_standee\textures\Support_normal.png
+    assetPath: Assets\URO Asset\model3D\easel_standee\textures\Support_normal.png
+  reportItems: []

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easel Standee
+* source:	https://sketchfab.com/3d-models/easel-standee-2f5d927ddd7a474d906f8a370121e33b
+* author:	projectkaizen (https://sketchfab.com/project_kaizen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easel Standee" (https://sketchfab.com/3d-models/easel-standee-2f5d927ddd7a474d906f8a370121e33b) by projectkaizen (https://sketchfab.com/project_kaizen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

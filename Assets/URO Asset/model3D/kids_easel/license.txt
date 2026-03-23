@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kid's Easel
+* source:	https://sketchfab.com/3d-models/kids-easel-e0d7dd1475df4c8bb666c1c8884fea17
+* author:	Alec Huxley (https://sketchfab.com/alechuxley)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kid's Easel" (https://sketchfab.com/3d-models/kids-easel-e0d7dd1475df4c8bb666c1c8884fea17) by Alec Huxley (https://sketchfab.com/alechuxley) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
