@@ -1,0 +1,301 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 690,
+      "max": [
+        216.2947235107422,
+        124.01190185546875,
+        47.657344818115234
+      ],
+      "min": [
+        -215.54759216308594,
+        -6.081712245941162,
+        -47.657344818115234
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 8280,
+      "componentType": 5126,
+      "count": 690,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.8419324159622192,
+        -0.3116949796676636,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 690,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1200,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16560,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        205.9983673095703,
+        187.08981323242188,
+        108.64839172363281
+      ],
+      "min": [
+        -205.6051788330078,
+        65.70013427734375,
+        -61.20905303955078
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 22704,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        0.7416250705718994,
+        0.9844025373458862,
+        0.8348538875579834
+      ],
+      "min": [
+        -0.7416249513626099,
+        -0.9844024777412415,
+        -0.8348534107208252
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5520,
+      "componentType": 5126,
+      "count": 512,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4800,
+      "componentType": 5125,
+      "count": 864,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "VictorLimaPucMinas (https://sketchfab.com/VictorLimaPucMinas)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/arm-chair-ea02ad66d0cc4561b9026ea96b60ecb0",
+      "title": "Arm Chair"
+    },
+    "generator": "Sketchfab-15.55.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 8256,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9616,
+      "byteOffset": 8256,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28848,
+      "byteOffset": 17872,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 46720,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "HandSuport_Mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.00303577,
+          0.00560514,
+          0.0212175,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9986167450202215
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Cushion_Mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.327834,
+          0.0122859,
+          0.0144428,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9822171877062249
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Hand Support_HandSuport_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cushion_Cushion_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "62b4340ac2e2452fa6fa596e3abcdd94.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "Hand Support"
+    },
+    {
+      "mesh": 0,
+      "name": "Hand Support_HandSuport_Mat_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "Cushion"
+    },
+    {
+      "mesh": 1,
+      "name": "Cushion_Cushion_Mat_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 71549ab93c9e55c4e89c0dd4a39c1211
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\e.bin
+    assetPath: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\e.bin
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_baseColor.jpeg
+    assetPath: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_metallicRoughness.png
+    assetPath: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_normal.png
+    assetPath: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_normal.png
+  - type: 1
+    originalUri: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_specularf0.png
+    assetPath: Assets\URO Asset\model3D\simple_school_table_with_two_chairs\textures\plywood_specularf0.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular

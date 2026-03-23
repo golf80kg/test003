@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple school table
+* source:	https://sketchfab.com/3d-models/simple-school-table-b53067a498f1478a989881bcc7715696
+* author:	g33 (https://sketchfab.com/g33)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple school table" (https://sketchfab.com/3d-models/simple-school-table-b53067a498f1478a989881bcc7715696) by g33 (https://sketchfab.com/g33) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
