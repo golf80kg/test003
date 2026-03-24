@@ -1,0 +1,11 @@
+Model Information:
+* title:	Alarm
+* source:	https://sketchfab.com/3d-models/alarm-9398c2cc19c147e5b5af3150ec27dfd3
+* author:	Einheri (https://sketchfab.com/Einheri)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Alarm" (https://sketchfab.com/3d-models/alarm-9398c2cc19c147e5b5af3150ec27dfd3) by Einheri (https://sketchfab.com/Einheri) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

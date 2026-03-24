@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 311c655d43a3840418eba06846e93aa0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\scene.bin
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\scene.bin
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_baseColor.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_metallicRoughness.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_normal.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_normal.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_1_baseColor.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_1_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_2_baseColor.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_2_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_3_baseColor.png
+    assetPath: Assets\GolfAsset\Model3Dsmall\trash_can_recycle_bin_16mb_4part\textures\material_3_baseColor.png
+  reportItems: []

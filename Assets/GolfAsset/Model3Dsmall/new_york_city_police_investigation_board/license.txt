@@ -1,0 +1,11 @@
+Model Information:
+* title:	New York City Police Investigation Board
+* source:	https://sketchfab.com/3d-models/new-york-city-police-investigation-board-92ec311be575431a810550faacffec64
+* author:	Glowbox 3D (https://sketchfab.com/ra3id)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "New York City Police Investigation Board" (https://sketchfab.com/3d-models/new-york-city-police-investigation-board-92ec311be575431a810550faacffec64) by Glowbox 3D (https://sketchfab.com/ra3id) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

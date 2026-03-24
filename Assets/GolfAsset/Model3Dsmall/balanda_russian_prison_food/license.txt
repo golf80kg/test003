@@ -1,0 +1,11 @@
+Model Information:
+* title:	Balanda (Russian Prison Food)
+* source:	https://sketchfab.com/3d-models/balanda-russian-prison-food-0c0fd8cfc03942d48bac243f493fa7dc
+* author:	nodoxi (https://sketchfab.com/nodoxi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Balanda (Russian Prison Food)" (https://sketchfab.com/3d-models/balanda-russian-prison-food-0c0fd8cfc03942d48bac243f493fa7dc) by nodoxi (https://sketchfab.com/nodoxi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

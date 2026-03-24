@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese fire alarm
+* source:	https://sketchfab.com/3d-models/japanese-fire-alarm-831ce1f84e844abaa44bd0d47d9585da
+* author:	Sousinho (https://sketchfab.com/sousinho)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese fire alarm" (https://sketchfab.com/3d-models/japanese-fire-alarm-831ce1f84e844abaa44bd0d47d9585da) by Sousinho (https://sketchfab.com/sousinho) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese Vending Machine
+* source:	https://sketchfab.com/3d-models/japanese-vending-machine-f1852e99093249f1acd23ad118615b09
+* author:	K (https://sketchfab.com/tanaka.ko91)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese Vending Machine" (https://sketchfab.com/3d-models/japanese-vending-machine-f1852e99093249f1acd23ad118615b09) by K (https://sketchfab.com/tanaka.ko91) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

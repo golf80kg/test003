@@ -1,0 +1,11 @@
+Model Information:
+* title:	Russian Poster 1
+* source:	https://sketchfab.com/3d-models/russian-poster-1-8bf24790f55e47a28fd53029eed9367d
+* author:	Euphoria Collective (https://sketchfab.com/EmpityG)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Russian Poster 1" (https://sketchfab.com/3d-models/russian-poster-1-8bf24790f55e47a28fd53029eed9367d) by Euphoria Collective (https://sketchfab.com/EmpityG) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

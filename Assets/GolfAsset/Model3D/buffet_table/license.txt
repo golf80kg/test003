@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buffet table
+* source:	https://sketchfab.com/3d-models/buffet-table-685aac4b0f5b44cd9045ec8687292143
+* author:	lharris (https://sketchfab.com/lharris)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buffet table" (https://sketchfab.com/3d-models/buffet-table-685aac4b0f5b44cd9045ec8687292143) by lharris (https://sketchfab.com/lharris) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

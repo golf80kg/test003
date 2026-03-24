@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rubbish Bin
+* source:	https://sketchfab.com/3d-models/rubbish-bin-af4a5176320f4fec8fe72d8cc53d57b3
+* author:	BallsAndNinjas (https://sketchfab.com/pkrime)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rubbish Bin" (https://sketchfab.com/3d-models/rubbish-bin-af4a5176320f4fec8fe72d8cc53d57b3) by BallsAndNinjas (https://sketchfab.com/pkrime) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

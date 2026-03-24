@@ -1,0 +1,11 @@
+Model Information:
+* title:	Trash Can_Recycle Bin_16MB_4PART
+* source:	https://sketchfab.com/3d-models/trash-can-recycle-bin-16mb-4part-9b2efbe8e0734be49fdcbb432f7a0ea8
+* author:	Mehdi Shahsavan (https://sketchfab.com/ahmagh2e)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Trash Can_Recycle Bin_16MB_4PART" (https://sketchfab.com/3d-models/trash-can-recycle-bin-16mb-4part-9b2efbe8e0734be49fdcbb432f7a0ea8) by Mehdi Shahsavan (https://sketchfab.com/ahmagh2e) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

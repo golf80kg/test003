@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gashapon Japanese Toy Vending Machine
+* source:	https://sketchfab.com/3d-models/gashapon-japanese-toy-vending-machine-4cb0fd802fda43578cfc96776e4e3795
+* author:	mrongs (https://sketchfab.com/mrongs)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gashapon Japanese Toy Vending Machine" (https://sketchfab.com/3d-models/gashapon-japanese-toy-vending-machine-4cb0fd802fda43578cfc96776e4e3795) by mrongs (https://sketchfab.com/mrongs) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

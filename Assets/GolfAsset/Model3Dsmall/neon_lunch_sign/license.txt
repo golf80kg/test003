@@ -1,0 +1,11 @@
+Model Information:
+* title:	Neon Lunch Sign
+* source:	https://sketchfab.com/3d-models/neon-lunch-sign-70484ad4d0ed4dcbad1327e4bdd6c946
+* author:	amhyde (https://sketchfab.com/amhyde)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Neon Lunch Sign" (https://sketchfab.com/3d-models/neon-lunch-sign-70484ad4d0ed4dcbad1327e4bdd6c946) by amhyde (https://sketchfab.com/amhyde) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
