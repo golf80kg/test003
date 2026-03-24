@@ -1,0 +1,11 @@
+Model Information:
+* title:	Potted plant
+* source:	https://sketchfab.com/3d-models/potted-plant-b9bbb7b0c02f4fb29976bb1d004cb2d9
+* author:	Second Studio (https://sketchfab.com/kayaaku)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Potted plant" (https://sketchfab.com/3d-models/potted-plant-b9bbb7b0c02f4fb29976bb1d004cb2d9) by Second Studio (https://sketchfab.com/kayaaku) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

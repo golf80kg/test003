@@ -1,0 +1,8 @@
+Model Information:
+* title:	Potted Plant 02
+* source:	https://sketchfab.com/3d-models/potted-plant-02-a42dc7af860648f3859df86f4179784e
+* author:	Prince Obrymec (https://sketchfab.com/prince-obrymec)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
