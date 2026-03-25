@@ -1,0 +1,11 @@
+Model Information:
+* title:	Messy Tack Board
+* source:	https://sketchfab.com/3d-models/messy-tack-board-da1301f7148f421698d6b9dc1858d45b
+* author:	M.Reslan (https://sketchfab.com/mreslan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Messy Tack Board" (https://sketchfab.com/3d-models/messy-tack-board-da1301f7148f421698d6b9dc1858d45b) by M.Reslan (https://sketchfab.com/mreslan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Statue of Kazunobu Sagawa：佐川一信の像
+* source:	https://sketchfab.com/3d-models/statue-of-kazunobu-sagawa-6cb59e79b3f44b20b78dc33e77bd2ed4
+* author:	kazugoru (https://sketchfab.com/kazugoru)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Statue of Kazunobu Sagawa：佐川一信の像" (https://sketchfab.com/3d-models/statue-of-kazunobu-sagawa-6cb59e79b3f44b20b78dc33e77bd2ed4) by kazugoru (https://sketchfab.com/kazugoru) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

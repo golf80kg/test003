@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Fire Exit
+* source:	https://sketchfab.com/3d-models/low-poly-fire-exit-083f39278c9e42e18047fbdd67164e81
+* author:	Ayd3n91 (https://sketchfab.com/Ayd3n91)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Fire Exit" (https://sketchfab.com/3d-models/low-poly-fire-exit-083f39278c9e42e18047fbdd67164e81) by Ayd3n91 (https://sketchfab.com/Ayd3n91) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
