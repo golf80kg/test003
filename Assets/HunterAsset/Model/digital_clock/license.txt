@@ -1,0 +1,11 @@
+Model Information:
+* title:	Digital Clock
+* source:	https://sketchfab.com/3d-models/digital-clock-29f2859da57b491dbca907164a8014f0
+* author:	oscarherry3d (https://sketchfab.com/oscarherry3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Digital Clock" (https://sketchfab.com/3d-models/digital-clock-29f2859da57b491dbca907164a8014f0) by oscarherry3d (https://sketchfab.com/oscarherry3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
