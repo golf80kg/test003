@@ -1,0 +1,11 @@
+Model Information:
+* title:	Highpoly laboratory assets
+* source:	https://sketchfab.com/3d-models/highpoly-laboratory-assets-2e30927304db48c5ab10083b05e84255
+* author:	Anouk Paardekam (https://sketchfab.com/Ravennest13)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Highpoly laboratory assets" (https://sketchfab.com/3d-models/highpoly-laboratory-assets-2e30927304db48c5ab10083b05e84255) by Anouk Paardekam (https://sketchfab.com/Ravennest13) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

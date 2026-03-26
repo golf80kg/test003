@@ -1,0 +1,417 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 12960,
+      "max": [
+        7.530315399169922,
+        160.96173095703125,
+        -53.36724090576172
+      ],
+      "min": [
+        -54.29472351074219,
+        130.01153564453125,
+        -105.45929718017578
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 155520,
+      "componentType": 5126,
+      "count": 12960,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 12960,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.999977171421051,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 12960,
+      "max": [
+        0.9891235828399658,
+        0.855377197265625
+      ],
+      "min": [
+        0.010833203792572021,
+        0.010854929685592651
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 63636,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 311040,
+      "componentType": 5126,
+      "count": 393,
+      "max": [
+        7.337499618530273,
+        161.7071075439453,
+        -55.18265151977539
+      ],
+      "min": [
+        -54.104366302490234,
+        130.289794921875,
+        -105.44708251953125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 315756,
+      "componentType": 5126,
+      "count": 393,
+      "max": [
+        1.0,
+        0.9999188780784607,
+        0.9960470199584961
+      ],
+      "min": [
+        -1.0,
+        -0.9999326467514038,
+        -0.9522985816001892
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 207360,
+      "componentType": 5126,
+      "count": 393,
+      "max": [
+        0.9991584420204163,
+        0.9999991655349731,
+        0.9998903274536133,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999994039535522,
+        -0.9997506141662598,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 103680,
+      "componentType": 5126,
+      "count": 393,
+      "max": [
+        0.9691876173019409,
+        0.9963817596435547
+      ],
+      "min": [
+        0.0035171210765838623,
+        0.0036182701587677
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 254544,
+      "componentType": 5125,
+      "count": 1236,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Willowboxart (https://sketchfab.com/willowboxart)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/food-rack-ba7b0cb2a8a54e3b8126ebd1a040231c",
+      "title": "Food Rack"
+    },
+    "generator": "Sketchfab-15.26.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 259488,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 106824,
+      "byteOffset": 259488,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 320472,
+      "byteOffset": 366312,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 213648,
+      "byteOffset": 686784,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 900432,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/M_Display_Case_Metal_baseColor.png"
+    },
+    {
+      "uri": "textures/M_Display_Case_Metal_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_Display_Case_Metal_normal.png"
+    },
+    {
+      "uri": "textures/M_Display_Case_Glass_baseColor.png"
+    },
+    {
+      "uri": "textures/M_Display_Case_Glass_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_Display_Case_Glass_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "M_Display_Case_Metal",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "M_Display_Case_Glass",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_Food_Rack_M_Display_Case_Metal_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SM_Food_Rack_M_Display_Case_Glass_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "SM Food Rack.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        -1.0,
+        1.2246467991473535e-16,
+        -1.4547323094649232e-15,
+        0.0,
+        1.2246467991473515e-16,
+        1.0,
+        1.2246467991473535e-16,
+        0.0,
+        1.4547323094649232e-15,
+        1.2246467991473515e-16,
+        -1.0,
+        0.0,
+        -23.395221710205078,
+        -130.0115509033203,
+        -80.22825622558594,
+        1.0
+      ],
+      "name": "SM_Food_Rack"
+    },
+    {
+      "mesh": 0,
+      "name": "SM_Food_Rack_M_Display_Case_Metal_0"
+    },
+    {
+      "mesh": 1,
+      "name": "SM_Food_Rack_M_Display_Case_Glass_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}
