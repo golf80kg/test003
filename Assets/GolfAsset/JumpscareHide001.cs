@@ -1,32 +1,45 @@
 using UnityEngine;
-using System.Collections; // ต้องมีบรรทัดนี้เพื่อใช้ระบบหน่วงเวลา (Coroutine)
+using System.Collections;
 
 public class JumpscareHide001 : MonoBehaviour
 {
-    public GameObject ghostModel; // ลากโมเดลผีมาใส่ช่องนี้
-    public AudioSource scareSound; // (ตัวเลือก) ลากเสียงตกใจมาใส่
+    public GameObject ghostModel; 
+    public AudioSource scareSound; 
+
+    private bool hasTriggered = false; // กันบั๊กชนซ้ำ
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasTriggered)
         {
-            StartCoroutine(ShowAndHideGhost()); // สั่งให้เริ่มทำงานแบบหน่วงเวลา
+            hasTriggered = true; // ล็อคไว้ว่าทำงานแล้ว
+            StartCoroutine(ShowAndHideGhost());
         }
     }
 
     IEnumerator ShowAndHideGhost()
     {
-        // 1. ทำให้ผีปรากฏตัว
+        // 1. ผีโผล่ + เล่นเสียง
         ghostModel.SetActive(true); 
         if (scareSound != null) scareSound.Play();
 
-        // 2. รอเวลา 3 วินาที (ยูโรปรับเลขได้ตรงนี้)
-        yield return new WaitForSeconds(2f);
+        // 2. รอ 2 วินาทีตามที่ยูโรตั้งไว้
+        yield return new WaitForSeconds(1f);
 
-        // 3. ทำให้ผีหายไป
+        // 3. ปิดโมเดลผี (แต่เสียงใน Audio Source จะยังดังอยู่ถ้าไม่ได้ติดไว้ที่ตัวผีที่ถูกปิด)
         ghostModel.SetActive(false);
 
-        // 4. ทำลายตัว Trigger ทิ้งไปเลยเพื่อไม่ให้หลอกซ้ำที่เดิม
+        // 4. รอจนกว่าเสียงจะเล่นจบจริงๆ ก่อนค่อยทำลายตัวเอง (Trigger)
+        if (scareSound != null)
+        {
+            // รอจนกว่า AudioSource จะหยุดเล่น
+            while (scareSound.isPlaying)
+            {
+                yield return null; 
+            }
+        }
+
+        // 5. ทำลายตัว Trigger ทิ้งเมื่อเสียงจบแล้ว
         Destroy(gameObject); 
     }
 }

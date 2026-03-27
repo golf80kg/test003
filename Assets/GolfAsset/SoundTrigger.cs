@@ -2,23 +2,26 @@ using UnityEngine;
 
 public class SoundTrigger : MonoBehaviour
 {
-    // ลาก Audio Source จากจุดที่วางไว้มาใส่ในช่องนี้
+    // ลาก Audio Source จากจุดที่วางไว้ในแมพมาใส่ในช่องนี้
     public AudioSource remoteAudioSource; 
     
     // ตรวจสอบว่ามีอะไรมาชนกล่องนี้ไหม
     private void OnTriggerEnter(Collider other)
     {
-        // เช็กว่าสิ่งที่มาชนคือ Player ใช่หรือไม่
+        // 1. เช็กว่าสิ่งที่มาชนคือ Player ใช่หรือไม่
         if (other.CompareTag("Player"))
         {
-            // ถ้าใช่ ให้สั่งเล่นเสียงที่จุดกำเนิดเสียงที่ตั้งไว้
+            // 2. เช็กว่ามี Audio Source ใส่ไว้ไหม และตอนนี้เสียงไม่ได้กำลังเล่นอยู่
             if (remoteAudioSource != null && !remoteAudioSource.isPlaying)
             {
+                // 3. สั่งให้เสียงเริ่มเล่น
                 remoteAudioSource.Play();
+                
                 Debug.Log("เดินชนแล้ว! เสียงดังที่: " + remoteAudioSource.gameObject.name);
                 
-                // ถ้าอยากให้ชนครั้งเดียวแล้วจบไปเลย ให้ลบกล่องทิ้ง (เอา // ออกถ้าต้องการ)
-                // Destroy(gameObject); 
+                // 4. [จุดสำคัญ] ทำลายตัวกล่อง Trigger (ตัวเอง) ทิ้งทันที
+                // เพื่อให้ไม่สามารถกลับมาชนซ้ำได้อีกในเกมรอบนั้น
+                Destroy(gameObject); 
             }
         }
     }
