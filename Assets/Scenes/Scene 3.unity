@@ -96635,7 +96635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: bdc8507839ae26a4b9da11d1647059f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -42.34
+      value: -42.39
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: bdc8507839ae26a4b9da11d1647059f2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -119781,7 +119781,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 22613009}
   noteToDestroy: {fileID: 1863372336}
-  MapSystem: {fileID: 1239954039}
+  MapSystem: {fileID: 1006382390}
 --- !u!4 &1392319418
 Transform:
   m_ObjectHideFlags: 0
@@ -134039,8 +134039,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7458687, y: 1.4327806, z: 0.4810895}
-  m_Center: {x: -3.5981731, y: -1.21643, z: 0.028575167}
+  m_Size: {x: 0.7458687, y: 1.0827079, z: 0.4810895}
+  m_Center: {x: -3.598168, y: -0.521607, z: 0.028575167}
 --- !u!114 &1569734489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135623,7 +135623,7 @@ MonoBehaviour:
   cooldownTime: 4
   doorToOpen: {fileID: 1482720452}
   noteToDestroy: {fileID: 699560889}
-  MapSystem: {fileID: 1750362346}
+  MapSystem: {fileID: 1538478451}
 --- !u!1001 &1593170233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173925,8 +173925,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7458687, y: 1.4327806, z: 0.10158885}
-  m_Center: {x: -3.5981731, y: -1.21643, z: -0.16117519}
+  m_Size: {x: 0.7458687, y: 1.4327806, z: 0.66218126}
+  m_Center: {x: -3.5981746, y: -1.2164322, z: 0.11912079}
 --- !u!1001 &2071203727
 PrefabInstance:
   m_ObjectHideFlags: 0
