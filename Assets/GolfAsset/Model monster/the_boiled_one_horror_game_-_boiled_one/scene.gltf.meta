@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 036d5de74bdf72347b853474366f301a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\scene.bin
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\scene.bin
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneBody_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneBody_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneDetails_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneDetails_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneEyes_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneEyes_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneGums_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneGums_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneTeeth_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneTeeth_baseColor.png
+  - type: 1
+    originalUri: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneHeadDetail_baseColor.png
+    assetPath: Assets\GolfAsset\Model monster\the_boiled_one_horror_game_-_boiled_one\textures\BoiledOneHeadDetail_baseColor.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular

@@ -1,18 +1,35 @@
 using UnityEngine;
+using UnityEngine.UI; 
 using System.Collections;
 
 public class JumpscareHide001 : MonoBehaviour
 {
     public GameObject ghostModel; 
     public AudioSource scareSound; 
+    public Image blackOverlay; 
+    
+    [Header("Time Settings")]
+    public float ghostShowTime = 1f;   // << ช่องใหม่! ปรับเวลาให้ผีโชว์ตัวก่อนหาย (วินาที)
+    public float blindDuration = 0.5f; // เวลาที่หน้าจอมืดสนิท
+    public float fadeSpeed = 1.5f;     // ความเร็วในการกลับมามองเห็น
 
-    private bool hasTriggered = false; // กันบั๊กชนซ้ำ
+    private bool hasTriggered = false;
+
+    private void Start()
+    {
+        if (blackOverlay != null)
+        {
+            Color c = blackOverlay.color;
+            c.a = 0f;
+            blackOverlay.color = c;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !hasTriggered)
         {
-            hasTriggered = true; // ล็อคไว้ว่าทำงานแล้ว
+            hasTriggered = true; 
             StartCoroutine(ShowAndHideGhost());
         }
     }
@@ -23,23 +40,40 @@ public class JumpscareHide001 : MonoBehaviour
         ghostModel.SetActive(true); 
         if (scareSound != null) scareSound.Play();
 
-        // 2. รอ 2 วินาทีตามที่ยูโรตั้งไว้
-        yield return new WaitForSeconds(1f);
+        // 2. รอตามเวลาที่ยูโรตั้งไว้ในช่อง Ghost Show Time
+        yield return new WaitForSeconds(ghostShowTime);
 
-        // 3. ปิดโมเดลผี (แต่เสียงใน Audio Source จะยังดังอยู่ถ้าไม่ได้ติดไว้ที่ตัวผีที่ถูกปิด)
-        ghostModel.SetActive(false);
-
-        // 4. รอจนกว่าเสียงจะเล่นจบจริงๆ ก่อนค่อยทำลายตัวเอง (Trigger)
-        if (scareSound != null)
+        // 3. จังหวะผีหาย -> หน้าจอมืดสนิททันที!
+        if (blackOverlay != null)
         {
-            // รอจนกว่า AudioSource จะหยุดเล่น
-            while (scareSound.isPlaying)
+            Color c = blackOverlay.color;
+            c.a = 1f; 
+            blackOverlay.color = c;
+        }
+        
+        ghostModel.SetActive(false); 
+
+        // 4. หน้าจอมืดค้างไว้แป๊บนึง
+        yield return new WaitForSeconds(blindDuration);
+
+        // 5. ค่อยๆ จางสีดำออกจนกลับมามองเห็นปกติ
+        if (blackOverlay != null)
+        {
+            while (blackOverlay.color.a > 0)
             {
-                yield return null; 
+                Color c = blackOverlay.color;
+                c.a -= Time.deltaTime * fadeSpeed;
+                blackOverlay.color = c;
+                yield return null;
             }
         }
 
-        // 5. ทำลายตัว Trigger ทิ้งเมื่อเสียงจบแล้ว
+        // 6. รอจนเสียงจบแล้วค่อยทำลายตัวเอง
+        if (scareSound != null)
+        {
+            while (scareSound.isPlaying) yield return null;
+        }
+
         Destroy(gameObject); 
     }
 }

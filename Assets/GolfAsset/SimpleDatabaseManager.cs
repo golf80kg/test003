@@ -31,7 +31,6 @@ public class SimpleDatabaseManager : MonoBehaviour
     private string tempPlayerName;
     private float totalPlayTimeCounter;
     private bool isTimerRunning = false;
-
     private string lastSceneName; 
 
     void Awake() 

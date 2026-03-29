@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Boiled One: Horror Game - Boiled One
+* source:	https://sketchfab.com/3d-models/the-boiled-one-horror-game-boiled-one-64ce66c413fe4e5e92a48e8e02a83590
+* author:	MG Rips (https://sketchfab.com/MG_GameRips)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Boiled One: Horror Game - Boiled One" (https://sketchfab.com/3d-models/the-boiled-one-horror-game-boiled-one-64ce66c413fe4e5e92a48e8e02a83590) by MG Rips (https://sketchfab.com/MG_GameRips) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
