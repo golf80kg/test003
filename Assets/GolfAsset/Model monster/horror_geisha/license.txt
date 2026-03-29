@@ -1,0 +1,11 @@
+Model Information:
+* title:	Horror Geisha
+* source:	https://sketchfab.com/3d-models/horror-geisha-4791d315c9314c208e5710e0b474b6f1
+* author:	lucia.martorell (https://sketchfab.com/lucia.martorell)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Horror Geisha" (https://sketchfab.com/3d-models/horror-geisha-4791d315c9314c208e5710e0b474b6f1) by lucia.martorell (https://sketchfab.com/lucia.martorell) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
