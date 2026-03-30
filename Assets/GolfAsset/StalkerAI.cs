@@ -5,8 +5,9 @@ public class StalkerAI : MonoBehaviour
 {
     public NavMeshAgent ai;
     public Transform player;
-    public Animator anim; // <--- ช่องนี้จะโผล่มาให้ลากแล้วครับ!
+    public Animator anim; 
     
+    [Header("AI Settings")]
     public float viewDistance = 15f; 
     public float wanderRadius = 10f; 
     public float aiSpeedWander = 2f; 
@@ -18,11 +19,8 @@ public class StalkerAI : MonoBehaviour
 
     void Update()
     {
-        // สั่งให้อนิเมชั่นทำงานตามความเร็วที่ AI เดินจริง
-        if (anim != null)
-        {
-            anim.SetFloat("Speed", ai.velocity.magnitude);
-        }
+        // --- ส่วนที่ตัดออก: ไม่ต้องสั่ง anim.SetFloat("Speed") แล้ว ---
+        // เพื่อให้มันเล่นท่าทางที่ตั้งไว้ใน Animator (Entry State) ตลอดเวลา
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -45,7 +43,8 @@ public class StalkerAI : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 direction = player.position - transform.position;
-        // ปรับจุดยิง Ray ให้สูงขึ้นนิดหน่อยจะได้ไม่ติดพื้น
+        
+        // ยิง Ray จากระดับอก (สูงขึ้น 1 เมตร) เพื่อเช็กว่าเห็นผู้เล่นไหม
         if (Physics.Raycast(transform.position + Vector3.up, direction, out hit, viewDistance))
         {
             if (hit.transform.CompareTag("Player")) return true;
@@ -67,6 +66,9 @@ public class StalkerAI : MonoBehaviour
         isChasing = false;
         investigatingLastPos = true;
         ai.SetDestination(lastKnownPosition);
+        
+        // หยุดเดินหาหลังจากผ่านไป 3 วินาที
+        CancelInvoke("FinishInvestigating"); 
         Invoke("FinishInvestigating", 3f); 
     }
 
@@ -81,7 +83,11 @@ public class StalkerAI : MonoBehaviour
         Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
         randomDirection += transform.position;
         NavMeshHit hit;
-        NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, 1);
-        ai.SetDestination(hit.position);
+        
+        // สุ่มหาพิกัดบนพื้นสีฟ้า (NavMesh)
+        if (NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, 1))
+        {
+            ai.SetDestination(hit.position);
+        }
     }
 }
