@@ -145,6 +145,162 @@
         "true"
       ],
       "correctAnswerIndex": 1
+    },
+    {
+      "id": 13,
+      "type": "IFElse",
+      "text": "var num1 = 10;var num2 = 15;if (num1 > num2) {console.log(\"num1 is greater.\");} else { console.log(\"num2 is greater.\");}",
+      "hint": "ตอนนี้ยามดูเลขในกล่องแล้ว 10 มากกว่า 15 จริงหรือเปล่า? ถ้าไม่จริง เขาต้องไปประตูไหน?",
+      "choices": [
+        "num1 is greater.", 
+        "10", 
+        "num2 is greater.", 
+        "ไม่แสดงผลใดๆ"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": 14,
+      "type": "IFElse",
+      "text": "var number = 5; if (number > 0) { console.log('The number is positive.'); } else { console.log('The number is not positive.'); }",
+      "hint": "'5 มากกว่า 0' มัน จริง หรือ ไม่จริง? ถ้ามัน 'จริง' คอมพิวเตอร์จะวิ่งเข้าหาปีกกาอันแรก",
+      "choices": [
+        "5", 
+        "The number is positive.", 
+        "The number is not positive.", 
+        "Error"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 15,
+      "type": "IFElse",
+      "text": "int main() { int time = 20; bool isDay = time < 18; if (isDay) { printf(\"Good day.\"); } else { printf(\"Good evening.\"); } return 0; }",
+      "hint": "ตอนนี้ time คือ 20 ใช่ไหม? ทีนี้ลองดูบรรทัด bool isDay = time < 18; ... ลองเปลี่ยนคำพูดเป็นภาษาไทยดูสิว่า '20 น้อยกว่า 18' มัน จริง (True) หรือ เท็จ (False)?",
+      "choices": [
+        "Good day.", 
+        "Good evening.", 
+        "20", 
+        "Error"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 16,
+      "type": "IFElse",
+      "text": "let time = 15;\nlet goTo = '';\nif (time < 10) { goTo = 'movie'; } else if (time < 20) { goTo = 'city'; } else { goTo = 'My home'; }\nconsole.log(goTo);",
+      "hint": "จินตนาการว่าเรามีเหรียญที่ชื่อว่า time อยู่ในมือ...ถ้าเหรียญมีค่าน้อยกว่า 10 -> จะได้ ตั๋วหนัง (movie)ถ้าเหรียญมีค่าตั้งแต่ 10 แต่ยังไม่ถึง 20 -> จะได้ ตั๋วไปเที่ยวเมือง (city)ถ้าเหรียญมีค่ามากกว่านั้น -> ไม่ได้ตั๋วอะไรเลย ต้องกลับ บ้าน (My home)",
+      "choices": [
+        "movie", 
+        "city", 
+        "My home", 
+        "movie และ city"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 17,
+      "type": "Loop",
+      "text": "let arr = [10, 20, 30, 40];\nfor (let i = 0; i < arr.length; i++) {\n  console.log(arr[i]);\n}",
+      "hint": "ตัวแปร i ใน for loop ก็คือ 'เลขโบกี้' ครับ เริ่มตั้งแต่โบกี้ที่ 0 ไปจนถึงโบกี้สุดท้าย... ถ้าน้องเปลี่ยน i เป็นเลข 0 น้องจะได้เลข 10 ออกมา แล้วถ้า i ค่อยๆ เพิ่มขึ้นทีละ 1 จนจบขบวน น้องจะได้เลขอะไรออกมาบ้าง?",
+      "choices": [
+        "5, 15, 25, 35", 
+        "10 แล้วขึ้นบรรทัดใหม่ 20 แล้วขึ้นบรรทัดใหม่ 30 แล้วขึ้นบรรทัดใหม่ 40", 
+        "5, 15, 25", 
+        "Error"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 18,
+      "type": "Loop",
+      "text": "let x = 2;for (; x <= 4; x++) {console.log(\"Value of x:\" + x);}",
+      "hint": "ปกติ for จะต้องมีคนบอกว่าเริ่มนับที่เท่าไหร่ในช่องแรก... แต่ข้อนี้ช่องแรกมันว่างเปล่า! แต่น้องเห็นไหมว่าข้างบนเขาสั่ง let x = 2 ไว้แล้ว? มันเหมือนเราเปิดเครื่องนับเลขมาแล้วมัน ค้างอยู่ที่เลข 2 พอดี\"",
+      "choices": [
+        " 5, 6, 7, 8", 
+        "5, 7, 8", 
+        "5, 7", 
+        "6, 7"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": 19,
+      "type": "Loop",
+      "text": " let arr_3   = [4, 6, 7];let arr_4    = [8, 1, 9];// Example output: // [12, 7, 16]",
+      "hint": ".มันคือการ \"บวกเลขเป็นคู่ๆ ตามตำแหน่ง\" โดยใช้ i เป็นตัวบอกว่าตอนนี้เรากำลังบวกคู่ไหนอยู่ (คู่ที่ 0, คู่ที่ 1 หรือคู่ที่ 2)",
+      "choices": [
+        "[11, 22, 33]", 
+        "[11, 40, 33]", 
+        "[10, 40, 90]", 
+        "[11, 40, 30]"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 20,
+      "type": "Loop",
+      "text": " let str2 = \"don’t know why\";// Example output: // “yes” ",
+      "hint": "ถ้า (if) ในตัวแปร str2 มีคำว่า 'know' อยู่ในนั้น... ให้พิมพ์ (console.log) คำว่า 'yes' ออกมา ไม่งั้น (else) ให้พิมพ์อย่างอื่น",
+      "choices": [
+        "Found it!", 
+        "true", 
+        " Error", 
+        "Not found."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "id": 21,
+      "type": "Loop",
+      "text": " let arr = [10, 20, 30, 40, 50];let newArr = arr.slice(1, 4);console.log(newArr);",
+      "hint": "ตัวเลขแรกคือ 'จุดสตาร์ท' (เอาตัวนั้นด้วย) ตัวเลขหลังคือ 'จุดหยุด' (แต่ไม่เอาตัวนั้นนะ!)\"ลองนับนิ้วดู: \"เริ่มที่ตำแหน่งที่ 1 (คือเลข 20) เดินไปจนถึงก่อนตำแหน่งที่ 4 (คือเลข 50)... น้องจะผ่านเลขอะไรมาบ้างก่อนจะถึงเลข 50?",
+      "choices": [
+        "[\"Red\", \"Green\", \"Blue\"]", 
+        "2", 
+        "3", 
+        "[\"Red", "Green\"]"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 22,
+      "type": "Loop",
+      "text": " let arr = [10, 20, 30, 40, 50];arr.splice(2, 2, 100, 200);console.log(arr);",
+      "hint": "สังเกตนะว่าเลข 10, 20 และ 50 ไม่ได้โดนใครยุ่งด้วยเลย! พวกมันยังอยู่ที่เดิม... ส่วนที่เปลี่ยนไปคือตรงกลางที่โดน 'ผ่าตัด' เอาเลขเก่าออกแล้วใส่เลขใหม่เข้าไป น้องลองเรียงเลขที่เหลืออยู่ทั้งหมดดู แล้วนั่นแหละคือคำตอบครับ!",
+      "choices": [
+        "2", 
+        "3", 
+        "4", 
+        "5"
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "id": 23,
+      "type": "Loop",
+      "text": " let numbers = [1, 2, 3, 4, 5];let result = numbers.filter(num => num % 2 === 0);console.log(result);",
+      "hint": "เลข % 2 === 0 คือการหา เลขคู่เลข % 2 !== 0 คือการหา เลขคี่ ในเมื่อโจทย์สั่งให้หาตัวที่หาร 2 แล้วเหลือเศษเป็น 0... คำตอบที่ออกมาจะเป็นกลุ่มของเลขคู่ในชุดข้อมูลนั้นครับ",
+      "choices": [
+        "[45, 50]", 
+        "45", 
+        "50", 
+        "30"
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "id": 24,
+      "type": "Loop",
+      "text": " let numbers = [1, 2, 3, 4];let squares = numbers.map(num => num * num);console.log(squares);",
+      "hint": "จำไว้นะครับว่า num * num คือการหา 'เลขยกกำลังสอง' > ดังนั้น squares ก็คือกลุ่มของเลขยกกำลังสองของเลข 1 ถึง 4 นั่นเอง คำตอบที่ออกมาจะหน้าตาเหมือน Array เดิม แต่ข้างในเป็นเลขที่ใหญ่ขึ้นตามสูตรคูณครับ!",
+      "choices": [
+        "[15, 25, 35]", 
+        "[25, 35]", 
+        "[10, 20, 30]", 
+        "[10, 25, 35]"
+      ],
+      "correctAnswerIndex": 3
     }
   ]
 }
