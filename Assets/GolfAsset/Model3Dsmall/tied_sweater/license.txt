@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tied Sweater
+* source:	https://sketchfab.com/3d-models/tied-sweater-a041dcbce3fb428b9d727ea2e08f16f6
+* author:	Diashit (https://sketchfab.com/Zzergu.Su)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tied Sweater" (https://sketchfab.com/3d-models/tied-sweater-a041dcbce3fb428b9d727ea2e08f16f6) by Diashit (https://sketchfab.com/Zzergu.Su) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

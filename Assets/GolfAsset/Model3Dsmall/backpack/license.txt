@@ -1,0 +1,11 @@
+Model Information:
+* title:	Backpack
+* source:	https://sketchfab.com/3d-models/backpack-82c13f3487f84657bff6ae9a028eec49
+* author:	irovetskiy (https://sketchfab.com/irovetskiy)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Backpack" (https://sketchfab.com/3d-models/backpack-82c13f3487f84657bff6ae9a028eec49) by irovetskiy (https://sketchfab.com/irovetskiy) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
