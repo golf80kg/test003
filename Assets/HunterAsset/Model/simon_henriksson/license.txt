@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simon Henriksson
+* source:	https://sketchfab.com/3d-models/simon-henriksson-2bf9621c13914fc7a4cd49dd5cccf9af
+* author:	dany.poliit (https://sketchfab.com/dany.poliit)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simon Henriksson" (https://sketchfab.com/3d-models/simon-henriksson-2bf9621c13914fc7a4cd49dd5cccf9af) by dany.poliit (https://sketchfab.com/dany.poliit) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

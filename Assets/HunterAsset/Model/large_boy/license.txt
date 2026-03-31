@@ -1,0 +1,11 @@
+Model Information:
+* title:	Large Boy
+* source:	https://sketchfab.com/3d-models/large-boy-8f2e3ff1477d4eb2b153890a6d98855d
+* author:	Percy (https://sketchfab.com/PercyLad)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Large Boy" (https://sketchfab.com/3d-models/large-boy-8f2e3ff1477d4eb2b153890a6d98855d) by Percy (https://sketchfab.com/PercyLad) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
