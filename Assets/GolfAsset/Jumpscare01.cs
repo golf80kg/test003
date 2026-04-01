@@ -1,35 +1,49 @@
-using System.Collections; // เพิ่มบรรทัดนี้เพื่อแก้ Error IEnumerator
+using System.Collections;
 using UnityEngine;
 
 public class Jumpscare01 : MonoBehaviour
 {
-    public GameObject JumpScareImg; // ช่องสำหรับลาก JumpscareImg จาก Canvas มาใส่
-    public AudioSource audioSource; // ช่องสำหรับลาก Audio Source มาใส่
+    public GameObject JumpScareImg; 
+    public AudioSource audioSource; 
+
+    private bool hasTriggered = false; // กันเหนียว ไม่ให้ทำงานซ้ำ
 
     void Start()
     {
-        // ปิดรูปผีไว้ก่อนเสมอเมื่อเริ่มเกม
         if (JumpScareImg != null) JumpScareImg.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // ตรวจสอบว่าผู้เล่นเดินมาชน (ต้องใช้ g ตัวเล็ก)
-        if (other.gameObject.CompareTag("Player"))
-        {
-            JumpScareImg.SetActive(true); // โชว์รูปผี
-            if (audioSource != null) audioSource.Play(); // เล่นเสียงผี
+        // ถ้าเคยหลอกไปแล้ว หรือไม่ใช่ผู้เล่น ให้ข้ามไปเลย
+        if (hasTriggered || !other.CompareTag("Player")) return;
 
-            StartCoroutine(DisableJumpscare()); // เริ่มนับถอยหลังปิดรูป
-        }
+        hasTriggered = true; // ล็อคไว้ว่าทำงานแล้ว
+        
+        if (JumpScareImg != null) JumpScareImg.SetActive(true); 
+        if (audioSource != null) audioSource.Play(); 
+
+        // ปิด Collider ทันที เพื่อไม่ให้เดินชนซ้ำแล้วนับเวลาใหม่
+        Collider col = GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
+        StartCoroutine(DisableJumpscare());
     }
 
     IEnumerator DisableJumpscare()
     {
-        yield return new WaitForSeconds(1.0f); // โชว์ผีค้างไว้ 2 วินาที
-        JumpScareImg.SetActive(false);
+        // โชว์รูปผีค้างไว้ 1 วินาที (ปรับตามใจชอบ)
+        yield return new WaitForSeconds(1.0f); 
         
-        // ทำลายจุด Trigger ทิ้งไปเลย เพื่อไม่ให้ผีโผล่ซ้ำซ้อน
+        if (JumpScareImg != null) JumpScareImg.SetActive(false);
+
+        // รอจนกว่าเสียงจะเล่นจบจริงๆ ถึงจะทำลายวัตถุทิ้ง
+        if (audioSource != null && audioSource.clip != null)
+        {
+            // ถ้ายูโรอยากให้ทำลายทิ้งหลังเสียงจบ ให้รอนานเท่าความยาวเสียง
+            yield return new WaitForSeconds(audioSource.clip.length);
+        }
+
         Destroy(gameObject); 
     }
 }

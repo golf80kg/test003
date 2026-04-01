@@ -16,8 +16,9 @@ public class AiLook : MonoBehaviour
     public GameObject jumpScareUI;   
 
     [Header("Sequencer Settings")]
+    // เอา [HideInInspector] ออกเพื่อให้ลากใส่เองได้จากหน้า Inspector
+    public GameObject deathCameraObj;
     [HideInInspector] public PlayableDirector deathSequence; 
-    [HideInInspector] public GameObject deathCameraObj;
     public GameObject mainPlayer;          
 
     private Renderer aiRenderer;
@@ -27,16 +28,22 @@ public class AiLook : MonoBehaviour
     {
         if (playerCam == null) playerCam = Camera.main;
 
-        deathCameraObj = GameObject.Find("DeathCamera");
+        // ถ้าเราไม่ได้ลากใส่เองใน Inspector ให้พยายามหาชื่อ "DeathCamera" อัตโนมัติ
+        if (deathCameraObj == null)
+        {
+            deathCameraObj = GameObject.Find("DeathCamera");
+        }
+
+        // ตรวจสอบผลลัพธ์
         if (deathCameraObj != null)
         {
             deathSequence = deathCameraObj.GetComponent<PlayableDirector>();
             deathCameraObj.SetActive(false);
-            Debug.Log("<color=green>AI:</color> พบระบบ DeathCamera อัตโนมัติแล้ว!");
+            Debug.Log("<color=green>AI (" + gameObject.name + "):</color> เชื่อมต่อระบบ DeathCamera เรียบร้อย!");
         }
         else
         {
-            Debug.LogError("<color=red>AI Error:</color> ไม่พบวัตถุชื่อ 'DeathCamera' ในฉากนี้!");
+            Debug.LogError("<color=red>AI Error (" + gameObject.name + "):</color> ไม่พบวัตถุที่จะใช้เป็นกล้องตอนตาย! โปรดลากใส่ใน Inspector");
         }
 
         aiRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
@@ -61,17 +68,23 @@ public class AiLook : MonoBehaviour
 
     void StopEnemy()
     {
-        ai.isStopped = true;
-        ai.speed = 0;
-        ai.velocity = Vector3.zero;
+        if (ai.isOnNavMesh)
+        {
+            ai.isStopped = true;
+            ai.speed = 0;
+            ai.velocity = Vector3.zero;
+        }
     }
 
     void MoveToPlayer(float distance)
     {
-        ai.isStopped = false;
-        ai.speed = aiSpeed;
-        ai.SetDestination(player.position);
-        LookAtPlayer();
+        if (ai.isOnNavMesh)
+        {
+            ai.isStopped = false;
+            ai.speed = aiSpeed;
+            ai.SetDestination(player.position);
+            LookAtPlayer();
+        }
 
         if (distance <= killDistance)
         {
@@ -88,10 +101,11 @@ public class AiLook : MonoBehaviour
 
     void CaughtPlayer()
     {
+        if (isDead) return;
         isDead = true;
         ai.enabled = false; 
 
-        // 1. สั่งหยุดเวลาใน Database ทันทีที่โดนจับ
+        // 1. สั่งหยุดเวลาใน Database
         if (SimpleDatabaseManager.Instance != null)
         {
             SimpleDatabaseManager.Instance.SetTimerRunning(false);
@@ -121,12 +135,10 @@ public class AiLook : MonoBehaviour
         }
     }
 
-    // ฟังก์ชันใหม่: โหลดเข้า Scene GameOver
     void GoToGameOverScene()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        // เปลี่ยนเป็นชื่อ Scene ตายของคุณ (ต้องมีใน Build Settings)
         SceneManager.LoadScene("GameOverScene"); 
     }
 }
