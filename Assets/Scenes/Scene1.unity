@@ -6395,7 +6395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4a0301003ec1a7499948e3de087b6a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3ffe74ab7d6b4940ba81cfb4e59e574, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -60133,8 +60133,8 @@ MonoBehaviour:
   killDistance: 1.5
   deathScream: {fileID: 0}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 0}
   deathCameraObj: {fileID: 0}
+  deathSequence: {fileID: 0}
   mainPlayer: {fileID: 0}
 --- !u!195 &459387758
 NavMeshAgent:
@@ -103063,7 +103063,7 @@ AudioSource:
   m_GameObject: {fileID: 804026147}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 49bd6488e2f2b3b49bc3cd60c7d5b9c4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 11f49eccb98284f49a027ae60cfb61f7, type: 3}
   m_PlayOnAwake: 0
@@ -122413,8 +122413,8 @@ MonoBehaviour:
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 395c026a690a09142af87467848bc9eb, type: 3}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 1596020916}
   deathCameraObj: {fileID: 1596020913}
+  deathSequence: {fileID: 1596020916}
   mainPlayer: {fileID: 1506231717}
 --- !u!195 &965236516
 NavMeshAgent:
@@ -200025,7 +200025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6718072e7f0718d499f9d3c8d2c6f463, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3657ee0e6ec10849b801104615af571, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -216893,8 +216893,8 @@ MonoBehaviour:
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 395c026a690a09142af87467848bc9eb, type: 3}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 1596020916}
   deathCameraObj: {fileID: 1596020913}
+  deathSequence: {fileID: 1596020916}
   mainPlayer: {fileID: 1506231717}
 --- !u!195 &1718916169
 NavMeshAgent:
@@ -233220,7 +233220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5c4ba2ca984f484eb7aee18ff436d27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc3be5dd2ec42a944848773c55d35be1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

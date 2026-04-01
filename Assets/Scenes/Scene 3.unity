@@ -19016,7 +19016,7 @@ AudioSource:
   m_GameObject: {fileID: 215577975}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 49bd6488e2f2b3b49bc3cd60c7d5b9c4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 11f49eccb98284f49a027ae60cfb61f7, type: 3}
   m_PlayOnAwake: 0
@@ -39908,7 +39908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4caae1a539d87b24b9ca7d0f3f50b310, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fedda43181a7f64aa09514772ddc007, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -70083,8 +70083,8 @@ MonoBehaviour:
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 395c026a690a09142af87467848bc9eb, type: 3}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 53598006}
   deathCameraObj: {fileID: 53597999}
+  deathSequence: {fileID: 53598006}
   mainPlayer: {fileID: 2044828223}
 --- !u!195 &774211501
 NavMeshAgent:
@@ -133462,8 +133462,8 @@ MonoBehaviour:
   killDistance: 1.8
   deathScream: {fileID: 8300000, guid: 395c026a690a09142af87467848bc9eb, type: 3}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 53598006}
   deathCameraObj: {fileID: 53597999}
+  deathSequence: {fileID: 53598006}
   mainPlayer: {fileID: 2044828223}
 --- !u!195 &1498462117
 NavMeshAgent:
@@ -134621,7 +134621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e796dc214e1d9cb4db7f35443822cecc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2d04e28275641e40919ad929229b8e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -155772,8 +155772,8 @@ MonoBehaviour:
   killDistance: 1.5
   deathScream: {fileID: 0}
   jumpScareUI: {fileID: 0}
-  deathSequence: {fileID: 0}
   deathCameraObj: {fileID: 0}
+  deathSequence: {fileID: 0}
   mainPlayer: {fileID: 0}
 --- !u!195 &1777123461
 NavMeshAgent:

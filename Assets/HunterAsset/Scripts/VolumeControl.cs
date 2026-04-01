@@ -8,43 +8,43 @@ public class VolumeControl : MonoBehaviour
     public Slider volumeSlider;
     public Toggle muteToggle;
 
-    // ใช้ Awake เพื่อตั้งค่าหน้าตา UI ก่อนที่ Start จะเริ่มทำงาน
     void Awake()
     {
-        // 1. ดึงค่าที่เคยเซฟไว้ทันที (ถ้าไม่มีใช้ 0.75f)
+        // 1. ดึงค่าที่เคยเซฟไว้
         float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
         bool isMuted = PlayerPrefs.GetInt("IsMuted", 0) == 1;
 
-        // 2. บังคับให้ UI แสดงค่าตามที่เซฟไว้
+        // 2. ปิดการส่ง Event ชั่วคราว เพื่อไม่ให้มันไปเซฟทับตอนเราโหลดค่า
         if (volumeSlider != null)
         {
+            volumeSlider.onValueChanged.RemoveAllListeners(); 
             volumeSlider.value = savedVolume;
+            // เปิดการฟัง Event กลับคืนมาหลังจากตั้งค่าเสร็จ
+            volumeSlider.onValueChanged.AddListener(OnSliderChanged);
         }
 
         if (muteToggle != null)
         {
+            muteToggle.onValueChanged.RemoveAllListeners();
             muteToggle.isOn = isMuted;
+            muteToggle.onValueChanged.AddListener(OnToggleMuted);
         }
     }
 
     void Start()
     {
-        // เริ่มต้นส่งค่าไปยัง Mixer
         RefreshAudio();
     }
 
-    // ฟังก์ชันช่วยโหลดค่าและส่งไปที่ Mixer อีกครั้ง (กันเหนียว)
     public void RefreshAudio()
     {
         float currentVol = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
         bool currentMute = PlayerPrefs.GetInt("IsMuted", 0) == 1;
-        
         StartCoroutine(ApplySavedSettings(currentVol, currentMute));
     }
 
     private IEnumerator ApplySavedSettings(float volume, bool isMuted)
     {
-        // รอจนกว่า AudioManager.instance จะพร้อม
         yield return new WaitUntil(() => AudioManager.instance != null);
         ApplyVolume(volume, isMuted);
     }

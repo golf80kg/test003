@@ -1773,7 +1773,7 @@ MonoBehaviour:
       - m_Target: {fileID: 119176769}
         m_TargetAssemblyTypeName: VolumeControl, Assembly-CSharp
         m_MethodName: OnToggleMuted
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
