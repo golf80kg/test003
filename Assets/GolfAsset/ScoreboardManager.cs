@@ -27,11 +27,11 @@ public class ScoreboardManager : MonoBehaviour
     
     if (playerList == null || playerList.Count == 0)
     {
-        scoreText.text = "ยังไม่มีข้อมูลการเล่น";
+        scoreText.text = "ON ONE ESCAPE";
         return;
     }
 
-    string result = "<size=120%>TOP 8 SCORES</size>\n\n";
+    string result = "<size=120%>TOP BEST TIME</size>\n\n";
     
     int rank = 1;
 

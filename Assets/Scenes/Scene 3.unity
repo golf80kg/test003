@@ -44089,7 +44089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e5bbfcb34e81549a4a114836abfb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndGame
-  mainMenuName: EndingScene
+  mainMenuName: MainMenu
 --- !u!65 &508658489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123830,7 +123830,7 @@ MonoBehaviour:
   - {fileID: 816413638}
   - {fileID: 1813838413}
   - {fileID: 636288396}
-  cooldownTime: 4
+  cooldownTime: 30
   doorToOpen: {fileID: 22613009}
   noteToDestroy: {fileID: 1863372336}
   MapSystem: {fileID: 1006382390}
@@ -140955,7 +140955,7 @@ MonoBehaviour:
   - {fileID: 607203865}
   - {fileID: 2042424539}
   - {fileID: 1921969502}
-  cooldownTime: 4
+  cooldownTime: 30
   doorToOpen: {fileID: 1482720452}
   noteToDestroy: {fileID: 699560889}
   MapSystem: {fileID: 1538478451}
