@@ -47300,7 +47300,7 @@ MonoBehaviour:
   - {fileID: 64426268}
   - {fileID: 847713147}
   - {fileID: 719161899}
-  cooldownTime: 1
+  cooldownTime: 30
   doorToOpen: {fileID: 1409110034}
   noteToDestroy: {fileID: 1877231861}
   MapSystem: {fileID: 1252962265}
@@ -185313,7 +185313,7 @@ MonoBehaviour:
   - {fileID: 351700147}
   - {fileID: 605647648}
   - {fileID: 1246247940}
-  cooldownTime: 1
+  cooldownTime: 30
   doorToOpen: {fileID: 677641960}
   noteToDestroy: {fileID: 1160418702}
   MapSystem: {fileID: 1841548174}
