@@ -100,7 +100,7 @@ public class QuestionUIManager : MonoBehaviour
 
         while (remainingTime > 0)
         {
-            questionText.text = "<color=red>ตอบผิด!</color>\n กรุณารอ " + Mathf.CeilToInt(remainingTime) + " วินาที...";
+            questionText.text = "<color=red>ERROR</color> " + Mathf.CeilToInt(remainingTime) + "";
             remainingTime -= Time.deltaTime;
             yield return null; 
         }

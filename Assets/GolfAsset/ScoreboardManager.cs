@@ -27,7 +27,7 @@ public class ScoreboardManager : MonoBehaviour
     
     if (playerList == null || playerList.Count == 0)
     {
-        scoreText.text = "ON ONE ESCAPE";
+        scoreText.text = "NO ONE ESCAPE";
         return;
     }
 

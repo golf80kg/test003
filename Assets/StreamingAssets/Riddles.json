@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "IFElse", 
-      "text": "โจทย์เกี่ยวกับการตรวจสอบจำนวนบวก\n let num = 10;if ( _______ ) {console.log(Positive number);}",
+      "text": "let num = 10;\nif ( _______ ) {\n  console.log(Positive number);\n}",
       "hint": " จำนวนบวก (Positive number) คือตัวเลขทุกตัวที่มีค่า 'มากกว่าศูนย์' ขึ้นไป สัญลักษณ์ทางคณิตศาสตร์ตัวไหนที่ใช้แทนคำว่ามากกว่า",
       "choices": [
       "num = 0",
@@ -15,7 +15,7 @@
     {
       "id": 2,
       "type": "IFElse",
-      "text": "โจทย์การตรวจสอบ 'เลขคู่' (Even) หรือ 'เลขคี่' (Odd)\n let num = 7;if ( ________ ) {console.log(Even);} else {console.log(Odd);} ",
+      "text": "let num = 7;\nif ( ________ ) {\n  console.log(Even);\n} else {\n  console.log(Odd);\n}",
       "hint": " เลขคู่คือตัวเลขที่หารด้วย 2 แล้ว 'ลงตัวพอดี' (ไม่มีเศษ) ใน JavaScript เราใช้เครื่องหมายอะไรในการหา'เศษ'ของการหาร",
       "choices": [
       "num % 2 === 0",
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "type": "IFElse",
-      "text": "โจทย์ข้อนี้ ซึ่งเป็นการตรวจสอบช่วงของอายุ(Age Range)ว่าอยู่ในเกณฑ์ที่กำหนดหรือไม่ (ตั้งแต่ 18 ถึง 60 ปี)\n let age = 25; if(/*if (age >= 18 && age <= 60) */) { console.log(\"Allowed\"); } else { console.log(\"Not Allowed\"); }",
+      "text": "let age = 25;\nif ( ________ ) {\n  console.log(\"Allowed\");\n} else {\n  console.log(\"Not Allowed\");\n}",
       "hint": " ลองนำตัวเลข 25 ไปแทนค่าในคำว่า age ดูสิ! 25 มีค่ามากกว่าหรือเท่ากับ 18 หรือไม่? 'และ' 25 มีค่าน้อยกว่าหรือเท่ากับ 60 หรือไม่? ถ้าเป็นจริงทั้งคู่โปรแกรมจะเลือกพิมพ์ข้อความในปีกกาแรกออกมา",
       "choices": [
       "25 Allowed", 
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "type": "IFElse",
-      "text": "let num = 30;if (num >= 10 && num <= 50) {  console.log(\"In range\");} else {  console.log(\"Out of range\");}",
+      "text": "let num = 30;\nif (num >= 10 && num <= 50) {\n  console.log(\"In range\");\n} else {\n  console.log(\"Out of range\");\n}",
       "hint": " ลองนำเลข 30 ไปแทนค่าในตัวแปร num ดูสิ! 30 มีค่าตั้งแต่ 10 ขึ้นไป 'และ' ไม่เกิน 50 ใช่หรือไม่? ถ้าความจริงทั้งสองข้อนี้ถูกต้อง โปรแกรมจะเลือกแสดงข้อความชุดแรก",
       "choices": [
         "Out of range", 
@@ -51,7 +51,7 @@
       {
       "id": 5,
       "type": "Loop",
-      "text": ".let i = 5;for (let i = 0; i < 10; i++) { // some statements} console.log(i);",
+      "text": "let i = 5;\nfor (let i = 0; i < 10; i++) {\n  // some statements\n}\nconsole.log(i);",
       "hint": " จำไว้ว่าคำสั่ง let มีขอบเขตการทำงานแค่ในปีกกา หรือที่เรียกว่า 'Block Scope' ตัวแปร i ที่ถูกสร้างขึ้นมาใหม่ในวงเล็บของ for loop จะมีอยู่แค่ข้างในลูปเท่านั้น",
       "choices": [
         "9", 
@@ -63,7 +63,7 @@
       {
       "id": 6,
       "type": "Loop",
-      "text": "let i = 3;do {    console.log(i);    i--;} while (i > 0);",
+      "text": "let i = 3;\ndo {\n  console.log(i);\n  i--;\n} while (i > 0);",
       "hint": " จุดเด่นของลูป do...while คือกฎ 'ทำก่อนถาม' ครับ! มันจะเดินหน้าทำงานในวงเล็บปีกกาก่อนอย่างน้อย 1 ครั้งเสมอ โดยในรอบแรกมันจะพริ้นท์เลขปัจจุบันออกมา จากนั้นค่อยหักค่าลง 1 (i--) แล้วค่อยไปเช็คเงื่อนไขตอนท้ายว่ายังมากกว่า 0 อยู่ไหม ลองไล่สเต็ปการลดตัวเลขดูสิ!",
       "choices": [
         "3, 2, 1, 0", 
@@ -75,7 +75,7 @@
       {
       "id": 7,
       "type": "Loop",
-      "text": "const fruits = [\"apple\", \"banana\", \"cherry\"];for (let i = 0; i < fruits.length; i++) {console.log(fruits[i]);}",
+      "text": "const fruits = [\"apple\", \"banana\", \"cherry\"];\nfor (let i = 0; i < fruits.length; i++) {\n  console.log(fruits[i]);\n}",
       "hint": " ในลูปนี้ ตัวแปร i จะมีค่าเปลี่ยนไปเรื่อยๆ คือ 0, 1 และ 2 ตามลำดับ การสั่ง fruits[i] คือการหยิบผลไม้ในกล่องตามตำแหน่งนั้นออกมา และอย่าลืมนะว่าคำสั่ง console.log() จะทำการปริ้นข้อความแล้ว 'ขึ้นบรรทัดใหม่'ทุกครั้ง!",
       "choices": [
       "apple banana cherry (แสดงติดกันในบรรทัดเดียว)", 
@@ -87,7 +87,7 @@
       {
       "id": 8,
       "type": "Loop",
-      "text": "let i, x = '';for (i = 0; i <= 5; i++) {  x += i;}",
+      "text": "let i, x = '';\nfor (i = 0; i <= 5; i++) {\n  x += i;\n}",
       "hint": " สังเกตค่าเริ่มต้นของตัวแปร x ให้ดีๆ นะ มันถูกกำหนดให้เป็นข้อความว่างเปล่า '' (String) ไม่ใช่ตัวเลข 0! ดังนั้นเมื่อใช้เครื่องหมาย += กับตัวเลข มันจะไม่ได้เอาเลขมาบวกกันทางคณิตศาสตร์ แต่จะเป็นการเอาตัวอักษรมา 'ต่อท้ายกัน' แทน ลองไล่ดูสิว่าลูปนี้เริ่มต้นที่เลขอะไร และจบที่เลขอะไร",
       "choices": [
       "15", 
@@ -99,7 +99,7 @@
       {
       "id": 9,
       "type": "Array",
-      "text": "let arr1 = [1, 2, 3];let arr2 = [4, 5, 6];let result = arr1.concat(arr2);console.log(result);",
+      "text": "let arr1 = [1, 2, 3];\nlet arr2 = [4, 5, 6];\nlet result = arr1.concat(arr2);\nconsole.log(result);",
       "hint": " คำว่า concat ย่อมาจาก Concatenate หมายถึงการ 'นำมาต่อท้ายกัน' ลองนึกภาพว่าเรามีขบวนรถไฟสองขบวน (arr1 เป็นหัวขบวน และ arr2 เป็นท้ายขบวน) แล้วเอาขบวนที่สองมาเชื่อมต่อท้ายขบวนแรกดูสิ หน้าตาของขบวนรถไฟใหม่จะเรียงลำดับอย่างไร?",
       "choices": [
       "[5, 7, 9]",
@@ -111,7 +111,7 @@
       {
       "id": 10,
       "type": "Array",
-      "text": "let arr = [1, 2, 3];let firstElement = arr.shift();console.log(firstElement);console.log(arr);?",
+      "text": "let arr = [1, 2, 3];\nlet firstElement = arr.shift();\nconsole.log(firstElement);\nconsole.log(arr);",
       "hint": " ลองจินตนาการว่า Array คือแถวตอนเรียงหนึ่ง คำสั่ง .shift() มีหน้าที่ 'ดึง' คนที่อยู่หน้าสุดของแถวออกไป! ลองคิดดูสิว่าใครคือคนที่อยู่หน้าสุดที่จะถูกดึงไปเก็บในตัวแปร firstElement และคนที่ยังเหลือยืนอยู่ในแถว arr จะมีใครบ้าง?",
       "choices": [
       "1 แล้วขึ้นบรรทัดใหม่ [2, 3]",
@@ -123,7 +123,7 @@
     {
       "id": 11,
       "type": "Array",
-      "text": "let str = \"hello\"; let result = Array.from(str); console.log(result);",
+      "text": "let str = \"hello\";\nlet result = Array.from(str);\nconsole.log(result);",
       "hint": "คำสั่ง Array.from() มีหน้าที่สร้าง Array ตัวใหม่จากข้อมูลที่สามารถ \"แยกชิ้นส่วนได้\" ลองนึกภาพว่าเราเอาข้อความคำว่า \"hello\" ไปเข้าเครื่องหั่นหยาบๆ ให้กลายเป็นตัวอักษรทีละตัว แล้วจับแต่ละตัวมาใส่เรียงกันในกล่อง Array",
       "choices": [
         "[\"hello\"]", 
@@ -136,7 +136,7 @@
     {
       "id": 12,
       "type": "Array",
-      "text": "let numbers = [1, 2, 3, 4]; let result = numbers.find(num => num > 2); console.log(result);",
+      "text": "let numbers = [1, 2, 3, 4];\nlet result = numbers.find(num => num > 2);\nconsole.log(result);",
       "hint": "คำสั่ง .find() ทำหน้าที่เหมือน \"นักสืบที่ขี้เกียจ\" ครับ พอได้รับภารกิจให้หาตัวเลขที่ \"มากกว่า 2\" ทันทีที่มันเดินค้นหาใน Array จากซ้ายไปขวา แล้วเจอตัวเลข ตัวแรก ที่ตรงตามเงื่อนไข มันจะคว้าตัวเลขนั้นมาส่งให้เราแล้วเลิกหาต่อทันที!",
       "choices": [
         "[3, 4]", 
@@ -149,7 +149,7 @@
     {
       "id": 13,
       "type": "IFElse",
-      "text": "var num1 = 10;var num2 = 15;if (num1 > num2) {console.log(\"num1 is greater.\");} else { console.log(\"num2 is greater.\");}",
+      "text": "var num1 = 10;\nvar num2 = 15;\nif (num1 > num2) {\n  console.log(\"num1 is greater.\");\n} else {\n  console.log(\"num2 is greater.\");\n}",
       "hint": "ตอนนี้ยามดูเลขในกล่องแล้ว 10 มากกว่า 15 จริงหรือเปล่า? ถ้าไม่จริง เขาต้องไปประตูไหน?",
       "choices": [
         "num1 is greater.", 
@@ -162,7 +162,7 @@
     {
       "id": 14,
       "type": "IFElse",
-      "text": "var number = 5; if (number > 0) { console.log('The number is positive.'); } else { console.log('The number is not positive.'); }",
+      "text": "var number = 5;\nif (number > 0) {\n  console.log('The number is positive.');\n} else {\n  console.log('The number is not positive.');\n}",
       "hint": "'5 มากกว่า 0' มัน จริง หรือ ไม่จริง? ถ้ามัน 'จริง' คอมพิวเตอร์จะวิ่งเข้าหาปีกกาอันแรก",
       "choices": [
         "5", 
@@ -175,7 +175,7 @@
     {
       "id": 15,
       "type": "IFElse",
-      "text": "int main() { int time = 20; bool isDay = time < 18; if (isDay) { printf(\"Good day.\"); } else { printf(\"Good evening.\"); } return 0; }",
+      "text": "int main() {\n  int time = 20;\n  bool isDay = time < 18;\n  if (isDay) {\n    printf(\"Good day.\");\n  } else {\n    printf(\"Good evening.\");\n  }\n  return 0;\n}",
       "hint": "ตอนนี้ time คือ 20 ใช่ไหม? ทีนี้ลองดูบรรทัด bool isDay = time < 18; ... ลองเปลี่ยนคำพูดเป็นภาษาไทยดูสิว่า '20 น้อยกว่า 18' มัน จริง (True) หรือ เท็จ (False)?",
       "choices": [
         "Good day.", 
@@ -188,7 +188,7 @@
     {
       "id": 16,
       "type": "IFElse",
-      "text": "let time = 15;\nlet goTo = '';\nif (time < 10) { goTo = 'movie'; } else if (time < 20) { goTo = 'city'; } else { goTo = 'My home'; }\nconsole.log(goTo);",
+      "text": "let time = 15;\nlet goTo = '';\nif (time < 10) {\n  goTo = 'movie';\n} else if (time < 20) {\n  goTo = 'city';\n} else {\n  goTo = 'My home';\n}\nconsole.log(goTo);",
       "hint": "จินตนาการว่าเรามีเหรียญที่ชื่อว่า time อยู่ในมือ...ถ้าเหรียญมีค่าน้อยกว่า 10 -> จะได้ ตั๋วหนัง (movie)ถ้าเหรียญมีค่าตั้งแต่ 10 แต่ยังไม่ถึง 20 -> จะได้ ตั๋วไปเที่ยวเมือง (city)ถ้าเหรียญมีค่ามากกว่านั้น -> ไม่ได้ตั๋วอะไรเลย ต้องกลับ บ้าน (My home)",
       "choices": [
         "movie", 
@@ -214,7 +214,7 @@
     {
       "id": 18,
       "type": "Loop",
-      "text": "let x = 2;for (; x <= 4; x++) {console.log(\"Value of x:\" + x);}",
+      "text": "let x = 2;\nfor (; x <= 4; x++) {\n  console.log(\"Value of x:\" + x);\n}",
       "hint": "ปกติ for จะต้องมีคนบอกว่าเริ่มนับที่เท่าไหร่ในช่องแรก... แต่ข้อนี้ช่องแรกมันว่างเปล่า! แต่น้องเห็นไหมว่าข้างบนเขาสั่ง let x = 2 ไว้แล้ว? มันเหมือนเราเปิดเครื่องนับเลขมาแล้วมัน ค้างอยู่ที่เลข 2 พอดี\"",
       "choices": [
         " 5, 6, 7, 8", 
@@ -227,7 +227,7 @@
     {
       "id": 19,
       "type": "Loop",
-      "text": " let arr_3   = [4, 6, 7];let arr_4    = [8, 1, 9];// Example output: // [12, 7, 16]",
+      "text": "let arr_3 = [4, 6, 7];\nlet arr_4 = [8, 1, 9];\n// Example output:\n// [12, 7, 16]",
       "hint": ".มันคือการ \"บวกเลขเป็นคู่ๆ ตามตำแหน่ง\" โดยใช้ i เป็นตัวบอกว่าตอนนี้เรากำลังบวกคู่ไหนอยู่ (คู่ที่ 0, คู่ที่ 1 หรือคู่ที่ 2)",
       "choices": [
         "[11, 22, 33]", 
@@ -240,7 +240,7 @@
     {
       "id": 20,
       "type": "Loop",
-      "text": " let str2 = \"don’t know why\";// Example output: // “yes” ",
+      "text": "let str2 = \"don't know why\";\n// Example output:\n// \"yes\"",
       "hint": "ถ้า (if) ในตัวแปร str2 มีคำว่า 'know' อยู่ในนั้น... ให้พิมพ์ (console.log) คำว่า 'yes' ออกมา ไม่งั้น (else) ให้พิมพ์อย่างอื่น",
       "choices": [
         "Found it!", 
@@ -253,7 +253,7 @@
     {
       "id": 21,
       "type": "Loop",
-      "text": " let arr = [10, 20, 30, 40, 50];let newArr = arr.slice(1, 4);console.log(newArr);",
+      "text": "let arr = [10, 20, 30, 40, 50];\nlet newArr = arr.slice(1, 4);\nconsole.log(newArr);",
       "hint": "ตัวเลขแรกคือ 'จุดสตาร์ท' (เอาตัวนั้นด้วย) ตัวเลขหลังคือ 'จุดหยุด' (แต่ไม่เอาตัวนั้นนะ!)\"ลองนับนิ้วดู: \"เริ่มที่ตำแหน่งที่ 1 (คือเลข 20) เดินไปจนถึงก่อนตำแหน่งที่ 4 (คือเลข 50)... น้องจะผ่านเลขอะไรมาบ้างก่อนจะถึงเลข 50?",
       "choices": [
         "[\"Red\", \"Green\", \"Blue\"]", 
@@ -266,7 +266,7 @@
     {
       "id": 22,
       "type": "Loop",
-      "text": " let arr = [10, 20, 30, 40, 50];arr.splice(2, 2, 100, 200);console.log(arr);",
+      "text": "let arr = [10, 20, 30, 40, 50];\narr.splice(2, 2, 100, 200);\nconsole.log(arr);",
       "hint": "สังเกตนะว่าเลข 10, 20 และ 50 ไม่ได้โดนใครยุ่งด้วยเลย! พวกมันยังอยู่ที่เดิม... ส่วนที่เปลี่ยนไปคือตรงกลางที่โดน 'ผ่าตัด' เอาเลขเก่าออกแล้วใส่เลขใหม่เข้าไป น้องลองเรียงเลขที่เหลืออยู่ทั้งหมดดู แล้วนั่นแหละคือคำตอบครับ!",
       "choices": [
         "2", 
@@ -279,7 +279,7 @@
     {
       "id": 23,
       "type": "Loop",
-      "text": " let numbers = [1, 2, 3, 4, 5];let result = numbers.filter(num => num % 2 === 0);console.log(result);",
+      "text": "let numbers = [1, 2, 3, 4, 5];\nlet result = numbers.filter(num => num % 2 === 0);\nconsole.log(result);",
       "hint": "เลข % 2 === 0 คือการหา เลขคู่เลข % 2 !== 0 คือการหา เลขคี่ ในเมื่อโจทย์สั่งให้หาตัวที่หาร 2 แล้วเหลือเศษเป็น 0... คำตอบที่ออกมาจะเป็นกลุ่มของเลขคู่ในชุดข้อมูลนั้นครับ",
       "choices": [
         "[45, 50]", 
@@ -292,7 +292,7 @@
     {
       "id": 24,
       "type": "Loop",
-      "text": " let numbers = [1, 2, 3, 4];let squares = numbers.map(num => num * num);console.log(squares);",
+      "text": "let numbers = [1, 2, 3, 4];\nlet squares = numbers.map(num => num * num);\nconsole.log(squares);",
       "hint": "จำไว้นะครับว่า num * num คือการหา 'เลขยกกำลังสอง' > ดังนั้น squares ก็คือกลุ่มของเลขยกกำลังสองของเลข 1 ถึง 4 นั่นเอง คำตอบที่ออกมาจะหน้าตาเหมือน Array เดิม แต่ข้างในเป็นเลขที่ใหญ่ขึ้นตามสูตรคูณครับ!",
       "choices": [
         "[15, 25, 35]", 
