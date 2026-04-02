@@ -19,7 +19,7 @@ public class CutsceneController : MonoBehaviour
 
     void Update()
     {
-        // เผื่อให้ผู้เล่นกด Spacebar ข้ามคัทซีนได้
+        // เผื่อให้ผู้เล่นกด ESC ข้ามคัทซีนได้
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Escape))
         {
             GoToGame(timeline);
