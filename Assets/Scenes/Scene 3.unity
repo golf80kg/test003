@@ -44089,7 +44089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e5bbfcb34e81549a4a114836abfb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndGame
-  mainMenuName: MainMenu
+  mainMenuName: EndingScene
 --- !u!65 &508658489
 BoxCollider:
   m_ObjectHideFlags: 0
