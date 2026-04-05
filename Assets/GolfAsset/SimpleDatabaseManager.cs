@@ -22,8 +22,7 @@ public class SimpleDatabaseManager : MonoBehaviour
 {
     public static SimpleDatabaseManager Instance;
 
-    [Header("UI References")]
-    public TMP_InputField nameInput; 
+    private TMP_InputField nameInput; // private เพราะมีแค่ใน NamingScene เท่านั้น
     
     private string savePath;
     private PlayerDatabase db;
@@ -40,19 +39,21 @@ public class SimpleDatabaseManager : MonoBehaviour
             DontDestroyOnLoad(gameObject); 
             SceneManager.sceneLoaded += OnSceneLoaded;
         } else {
-            if (nameInput != null) Instance.nameInput = this.nameInput;
-            Destroy(gameObject);
+            Destroy(gameObject); // ทำลายตัวซ้ำทิ้ง
         }
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        nameInput = FindObjectOfType<TMP_InputField>();
-
-        if (nameInput != null)
+        // หา InputField เฉพาะหน้า NamingScene เท่านั้น
+        if (scene.name == "NamingScene")
         {
-            nameInput.characterLimit = 15;
-            Debug.Log("<color=green>System:</color> จำกัดการพิมพ์ชื่อไว้ที่ 15 ตัวอักษรแล้ว");
+            nameInput = FindObjectOfType<TMP_InputField>();
+            if (nameInput != null)
+            {
+                nameInput.characterLimit = 15;
+                Debug.Log("<color=green>System:</color> จำกัดการพิมพ์ชื่อไว้ที่ 15 ตัวอักษรแล้ว");
+            }
         }
 
         if (scene.name != "MainMenu" && scene.name != "NamingScene" && scene.name != "GameOverScene")
@@ -85,11 +86,6 @@ public class SimpleDatabaseManager : MonoBehaviour
         return string.IsNullOrEmpty(lastSceneName) ? "Scene1" : lastSceneName;
     }
 
-    public void GoToNamingScene()
-    {
-        SceneManager.LoadScene("NamingScene"); 
-    }
-
     public void StartGameRecord() 
     {
         if (nameInput != null)
@@ -115,14 +111,11 @@ public class SimpleDatabaseManager : MonoBehaviour
         SceneManager.LoadScene("Scene1"); 
     }
 
-    // --- [จุดที่แก้ไข] ---
     public void FinishAndSaveGame() 
     {
         isTimerRunning = false;
         LoadDatabase();
 
-        // ใช้ System.Math.Round เพื่อปัดเศษทศนิยมเหลือ 2 ตำแหน่งก่อนบันทึก
-        // คราวนี้ในไฟล์ JSON จะเก็บแค่เลขสวยๆ เช่น 155.62
         float roundedTime = (float)System.Math.Round(totalPlayTimeCounter, 2);
 
         db.players.Add(new PlayerData { 
@@ -160,6 +153,4 @@ public class SimpleDatabaseManager : MonoBehaviour
         isTimerRunning = false;
         SceneManager.LoadScene(0); 
     }
-
-    private void OnDestroy() { SceneManager.sceneLoaded -= OnSceneLoaded; }
 }
