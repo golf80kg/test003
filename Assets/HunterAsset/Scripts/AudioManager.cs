@@ -23,12 +23,4 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // ฟังก์ชันสำหรับปรับความดัง (จะถูกเรียกจาก Script VolumeControl)
-    public void SetVolume(string name, float value)
-    {
-        // สูตรคำนวณ Linear To Logarithmic (เพื่อให้ Slider เลื่อนแล้วเสียงดังเบาดูเป็นธรรมชาติ)
-        float dB = Mathf.Log10(Mathf.Max(0.0001f, value)) * 20f;
-        mainMixer.SetFloat(name, dB);
-    }
 }
