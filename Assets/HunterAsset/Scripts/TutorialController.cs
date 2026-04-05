@@ -21,7 +21,10 @@ public class TutorialController : MonoBehaviour
         // คลิกเมาส์ซ้ายเพื่อเปลี่ยนหน้า (วนลูป)
         if (Input.GetMouseButtonDown(0)) 
         {
-            NextPage();
+            if (pages.Length == 0) return;
+            currentIndex = (currentIndex + 1) % pages.Length;
+            UpdatePages();
+            Debug.Log("เปลี่ยนเป็นหน้า: " + (currentIndex + 1));
         }
     }
 
@@ -30,17 +33,6 @@ public class TutorialController : MonoBehaviour
     {
         currentIndex = 0;
         UpdatePages();
-    }
-
-    public void NextPage()
-    {
-        if (pages.Length == 0) return;
-
-        // ใช้การหารเอาเศษ (Modulo) เพื่อให้ Index วนกลับมาที่ 0 เมื่อเกินจำนวนหน้า
-        currentIndex = (currentIndex + 1) % pages.Length;
-        
-        UpdatePages();
-        Debug.Log("เปลี่ยนเป็นหน้า: " + (currentIndex + 1));
     }
 
     void UpdatePages()
