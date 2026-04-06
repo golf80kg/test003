@@ -89,14 +89,14 @@ public class MapItem : MonoBehaviour
         isCollected = true;
         isPlayerInRange = false; 
 
-        // 1. ค้นหา MeshRenderer ทั้งที่ตัวแม่และตัวลูกทั้งหมด แล้วสั่งปิดทีละตัว
+        //ค้นหา MeshRenderer แล้วสั่งปิดทีละตัว
         MeshRenderer[] allMeshes = GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer mesh in allMeshes)
         {
             mesh.enabled = false;
         }
 
-        // 2. ปิดกรอบชน เพื่อไม่ให้เดินชนซ้ำ
+        //ปิดกรอบชน เพื่อไม่ให้เดินชนซ้ำ
         if (GetComponent<BoxCollider>() != null) GetComponent<BoxCollider>().enabled = false; 
 
         Debug.Log("เก็บโน้ตคำใบ้แล้ว! (กด Q เพื่อเปิดอ่าน)");
@@ -123,15 +123,14 @@ public class MapItem : MonoBehaviour
             Destroy(gameObject); 
         }
     }
-
-    // <--- ฟังก์ชันใหม่ที่เพิ่มเข้ามา สั่งทำลายโน้ตทันทีเวลาตอบถูก --->
+    
     public void ForceDestroyNote()
     {
         if (!isQuestionBoard)
         {
-            if (isReading) CloseNote(); // ถ้าเปิดอ่านค้างไว้ ให้ปิด UI ลงก่อน
+            if (isReading) CloseNote(); 
             Debug.Log("ทำลายคำใบ้พร้อมกำแพงแล้ว!");
-            Destroy(gameObject); // ระเบิดทิ้งเลย!
+            Destroy(gameObject); 
         }
     }
 }

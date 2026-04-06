@@ -18,9 +18,9 @@ public class QuestionUIManager : MonoBehaviour
 
     [Header("ตั้งค่ากำแพงและโน้ตที่จะให้หายไป")] 
     public GameObject doorToOpen; 
-    public MapItem noteToDestroy; // <--- เพิ่มช่องสำหรับลากสมุดโน้ตมาใส่
+    public MapItem noteToDestroy; 
     [Header("ตั้งค่าแมพให้หายไป")]
-    public GameObject MapSystem; // ช่องสำหรับลากแมพของเพื่อนมาใส่
+    public GameObject MapSystem; 
 
     private int correctIndex; 
     private bool isCooldown = false; 
@@ -35,14 +35,14 @@ public class QuestionUIManager : MonoBehaviour
     {
         questionPanel.SetActive(true); 
         
-        questionText.text = riddle.text; 
+        questionText.text = riddle.text; //ข้อความจากRiddletextไปแสดงบนUI
         originalQuestion = riddle.text; 
         correctIndex = riddle.correctAnswerIndex; 
         isCooldown = false; 
-
+        // loop วนซ้ำ  สำหรับ 4 ปุ่ม
         for (int i = 0; i < 4; i++)
         {
-            if (i < riddle.choices.Length)
+            if (i < riddle.choices.Length)//กันeror
             {
                 choiceTexts[i].text = riddle.choices[i];
             }
@@ -50,9 +50,9 @@ public class QuestionUIManager : MonoBehaviour
     }
 
     public void CheckAnswer(int selectedIndex)
-    {
+    {   //ถ้าcooldownอยู่ให้หยุด ไม่ให้กดซ้ำ
         if (isCooldown) return;
-
+        //เทียบปุ่มที่กดกับที่คำตอบที่ถูก
         if (selectedIndex == correctIndex)
         {
             Debug.Log("ตอบถูก! ผ่านได้");
@@ -61,14 +61,12 @@ public class QuestionUIManager : MonoBehaviour
             {
                 doorToOpen.SetActive(false); 
             }
-
-            // <--- สั่งประหารโน้ตคำใบ้ตรงนี้ --->
+            
             if (noteToDestroy != null)
             {
                 noteToDestroy.ForceDestroyNote();
             }
-
-            // <--- เพิ่มตรงนี้! สั่งปิดระบบแมพของเพื่อนเมื่อตอบถูก --->
+            
             if (MapSystem != null)
             {
                 MapSystem.SetActive(false);
@@ -88,17 +86,17 @@ public class QuestionUIManager : MonoBehaviour
     {
         questionPanel.SetActive(false); 
 
-        // ส่งสัญญาณบอก PlayerController ให้ล็อกเมาส์กลับ (ถ้าคุณใช้ระบบ PauseManager ให้คงบรรทัดนี้ไว้ครับ)
+        //ล็อคเมาส์เวลากดResume หน้าPause
         PlayerController player = FindAnyObjectByType<PlayerController>();
         if(player != null) player.ReturnToGame();
     }
 
     private IEnumerator WrongAnswerCooldown()
     {
-        isCooldown = true; 
-        float remainingTime = cooldownTime; 
+        isCooldown = true; //ป้องกัน player กดซ้ำระหว่างรอ
+        float remainingTime = cooldownTime; //เก็บเวลาไว้ในremainingtime
 
-        while (remainingTime > 0)
+        while (remainingTime > 0)//วนลูปถ้้าเวลาเหลือ
         {
             questionText.text = "<color=red>ERROR</color> " + Mathf.CeilToInt(remainingTime) + "";
             remainingTime -= Time.deltaTime;

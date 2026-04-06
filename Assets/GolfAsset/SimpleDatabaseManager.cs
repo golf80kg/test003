@@ -20,7 +20,7 @@ public class PlayerDatabase
 
 public class SimpleDatabaseManager : MonoBehaviour 
 {
-    public static SimpleDatabaseManager Instance;
+    public static SimpleDatabaseManager Instance;//ถ้า GetComponent Ob3D.GetComponent<StalkerAI>(); ต้องอ้างอิงวัตถุ
 
     private TMP_InputField nameInput; // private เพราะมีแค่ใน NamingScene เท่านั้น
     
