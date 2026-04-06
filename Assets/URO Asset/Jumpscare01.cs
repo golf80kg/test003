@@ -6,7 +6,7 @@ public class Jumpscare01 : MonoBehaviour
     public GameObject JumpScareImg; 
     public AudioSource audioSource; 
 
-    private bool hasTriggered = false; // กันเหนียว ไม่ให้ทำงานซ้ำ
+    private bool hasTriggered = false; // ไม่ให้ทำงานซ้ำ
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class Jumpscare01 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // ถ้าเคยหลอกไปแล้ว หรือไม่ใช่ผู้เล่น ให้ข้ามไปเลย
+        //เช็คว่าเคยทำงานไปรึยัง
         if (hasTriggered || !other.CompareTag("Player")) return;
 
         hasTriggered = true; // ล็อคไว้ว่าทำงานแล้ว
@@ -32,15 +32,14 @@ public class Jumpscare01 : MonoBehaviour
 
     IEnumerator DisableJumpscare()
     {
-        // โชว์รูปผีค้างไว้ 1 วินาที (ปรับตามใจชอบ)
+        // โชว์รูปผีค้างไว้ 1 วินาที
         yield return new WaitForSeconds(1.0f); 
         
         if (JumpScareImg != null) JumpScareImg.SetActive(false);
 
-        // รอจนกว่าเสียงจะเล่นจบจริงๆ ถึงจะทำลายวัตถุทิ้ง
+        // รอจนกว่าเสียงจะเล่นจบ
         if (audioSource != null && audioSource.clip != null)
-        {
-            // ถ้ายูโรอยากให้ทำลายทิ้งหลังเสียงจบ ให้รอนานเท่าความยาวเสียง
+        {            
             yield return new WaitForSeconds(audioSource.clip.length);
         }
 
